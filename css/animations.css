@@ -1,0 +1,353 @@
+/* Project Boxcar Brand Guide Animations */
+
+/* Animation Keyframes */
+@keyframes gradient-flow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -100% 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+/* Animated Elements - Continuous animations removed */
+/* These classes are kept for reference but are no longer used */
+.animate-gradient {
+  background: linear-gradient(270deg, var(--primary-teal), var(--primary-blue), var(--secondary-dark-gray));
+  background-size: 200% 200%;
+  /* Animation removed to avoid continuous movement */
+}
+
+.animate-float {
+  /* Animation removed to avoid continuous movement */
+}
+
+.animate-pulse {
+  /* Animation removed to avoid continuous movement */
+}
+
+.animate-rotate {
+  /* Animation removed to avoid continuous movement */
+}
+
+.animate-shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-size: 200% 100%;
+  /* Animation removed to avoid continuous movement */
+}
+
+/* GSAP Animation Classes */
+.gsap-reveal {
+  opacity: 0;
+}
+
+.gsap-slide-up {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.gsap-slide-down {
+  opacity: 0;
+  transform: translateY(-50px);
+}
+
+.gsap-slide-left {
+  opacity: 0;
+  transform: translateX(50px);
+}
+
+.gsap-slide-right {
+  opacity: 0;
+  transform: translateX(-50px);
+}
+
+.gsap-scale {
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+.gsap-flip {
+  opacity: 0;
+  transform: rotateY(90deg);
+}
+
+/* Interactive Animation Classes */
+.hover-scale {
+  transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+  transform: scale(1.1);
+}
+
+.hover-rotate {
+  transition: transform 0.5s ease;
+}
+
+.hover-rotate:hover {
+  transform: rotate(5deg);
+}
+
+.hover-3d {
+  transition: transform 0.5s ease;
+  transform-style: preserve-3d;
+}
+
+.hover-3d:hover {
+  transform: perspective(1000px) rotateY(15deg) rotateX(5deg);
+}
+
+.hover-glow {
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 15px var(--primary-teal);
+  transform: translateY(-5px);
+}
+
+.hover-bounce:hover {
+  animation: bounce 0.5s ease;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Button Animations */
+.btn.animated {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn.animated::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+.btn.animated:hover::after {
+  transform: translateX(100%);
+}
+
+/* Ripple Effect */
+.ripple {
+  position: relative;
+  overflow: hidden;
+}
+
+.ripple::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  transform: scale(10, 10);
+  opacity: 0;
+  transition: transform 0.5s, opacity 1s;
+}
+
+.ripple:active::after {
+  transform: scale(0, 0);
+  opacity: 0.3;
+  transition: 0s;
+}
+
+/* Logo Animations - Replaced 3D effect with subtle hover */
+.logo-preview {
+  transition: all 0.3s ease;
+}
+
+.logo-preview:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 162, 229, 0.12);
+}
+
+/* Color Palette Animations */
+.color-preview.animated {
+  position: relative;
+  overflow: hidden;
+}
+
+.color-preview.animated::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(45deg);
+  /* Animation removed to avoid continuous movement */
+}
+
+/* Add hover-only shimmer effect */
+.color-preview.animated:hover::before {
+  animation: shimmer 1.5s;
+}
+
+/* Typography Animations */
+.font-sample.animated {
+  transition: all 0.5s ease;
+}
+
+.font-sample.animated:hover {
+  letter-spacing: 2px;
+  color: var(--primary-teal);
+}
+
+/* Hero Section Animation - Continuous animation removed */
+.hero.animated {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(270deg, var(--primary-teal), var(--primary-blue), var(--secondary-dark-gray));
+  /* Static gradient background instead of animated one */
+}
+
+.hero.animated::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at center, rgba(0, 219, 219, 0.2) 0%, rgba(0, 162, 229, 0.2) 50%, transparent 70%);
+  /* Animation removed to avoid continuous movement */
+}
+
+/* Particle Background - Disabled */
+.particles-bg {
+  /* Hidden to avoid continuous animations */
+  display: none;
+}
+
+.particle {
+  /* Animation removed to avoid continuous movement */
+  display: none;
+}
+
+/* Tab Animation */
+.tab.animated {
+  position: relative;
+  overflow: hidden;
+}
+
+.tab.animated::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary-blue);
+  transition: width 0.3s ease;
+}
+
+.tab.animated:hover::after {
+  width: 100%;
+}
+
+/* Card Subtle Hover Animation - Replacing flip animation */
+.card-hover {
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo Item Hover Animation - More subtle than 3D transform */
+.logo-item {
+  transition: all 0.3s ease;
+  border-radius: 4px;
+}
+
+.logo-item:hover {
+  background-color: rgba(0, 219, 219, 0.05);
+  box-shadow: 0 3px 10px rgba(0, 162, 229, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Brand asset hover effect - Very subtle to maintain integrity */
+.brand-asset {
+  transition: all 0.3s ease;
+}
+
+.brand-asset:hover {
+  filter: brightness(1.03);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}

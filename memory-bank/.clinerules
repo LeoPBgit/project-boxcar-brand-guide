@@ -1,0 +1,86 @@
+# Cline Rules
+
+This file serves as a learning journal for the Project Boxcar Brand Guide, capturing important patterns, preferences, and project intelligence that help work more effectively.
+
+## Project Patterns
+
+### Documentation Patterns
+- Memory bank follows a hierarchical structure with projectbrief.md as the foundation
+- All documentation is in Markdown format
+- Files build upon each other in a clear hierarchy
+- Updates to memory bank should be made when discovering new project patterns, implementing significant changes, or when context needs clarification
+
+### Workflow Patterns
+- Read all memory bank files at the start of every task
+- Update documentation after implementing significant changes
+- Document current state and next steps in activeContext.md and progress.md
+- When making changes to the brand guide, always test across multiple browsers and devices
+
+### Code Organization Patterns
+- HTML follows a semantic structure with clear section divisions
+- CSS is organized by component type with variables for brand elements
+- JavaScript is organized into initialization functions for different interactive features
+- Assets are stored in appropriate directories based on type
+
+## User Preferences
+
+### Communication Preferences
+- Prefer direct, technical explanations of changes and their impact
+- Include visual examples when discussing design changes
+- Provide clear rationale for technical decisions
+- Focus on the practical implications of changes for brand consistency
+
+### Development Preferences
+- Maintain the vanilla HTML/CSS/JS approach without introducing frameworks
+- Prioritize maintainability and long-term stability over cutting-edge features
+- Focus on accessibility and cross-browser compatibility
+- Use CSS-based solutions over image-based ones when possible
+- Keep the codebase simple and well-documented
+
+## Known Challenges
+
+### Technical Challenges
+- Balancing comprehensive brand information with usability
+- Ensuring consistent rendering across different browsers and devices
+- Maintaining performance with interactive elements
+- Keeping the guide accessible despite complex visual elements
+
+### Content Challenges
+- Providing enough detail without overwhelming users
+- Balancing prescriptive guidelines with creative flexibility
+- Keeping the guide updated as the brand evolves
+- Addressing edge cases in brand application
+
+## Tool Usage Patterns
+
+### Development Tools
+- VS Code for code editing with HTML, CSS, and JavaScript extensions
+- Chrome DevTools for testing and debugging
+- Git for version control
+- Browser testing across Chrome, Firefox, Safari, and Edge
+
+### Design Tools
+- Adobe Illustrator for vector graphics and logo files
+- Adobe Photoshop for image editing
+- Color contrast checkers for accessibility verification
+- Responsive design testing tools
+
+## Evolution of Project Decisions
+
+### Initial Approach
+- Started with a comprehensive single-page application structure
+- Used semantic HTML for better accessibility and SEO
+- Implemented CSS variables for brand colors and typography
+- Created a tabbed interface for content organization
+
+### Refinements
+- Moved from image-based examples to CSS-based placeholders for better performance and maintenance
+- Enhanced interactive elements with better feedback and accessibility
+- Improved mobile responsiveness with a more robust navigation system
+- Added tools for testing color combinations and typography
+
+### Future Direction
+- Considering adding search functionality for better usability
+- Exploring dark mode support for reduced eye strain
+- Investigating PDF export for offline reference
+- Looking into integration with design tools for seamless workflow

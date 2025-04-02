@@ -1,0 +1,143 @@
+/* Placeholder Images for Brand Guide */
+
+.placeholder {
+  background: linear-gradient(45deg, var(--primary-teal), var(--primary-blue));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  position: relative;
+}
+
+.placeholder::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path d="M30,20 L70,20 L70,80 L30,80 Z" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="2"/><path d="M30,20 L70,80" stroke="rgba(255,255,255,0.3)" stroke-width="2"/><path d="M70,20 L30,80" stroke="rgba(255,255,255,0.3)" stroke-width="2"/></svg>');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50px;
+  opacity: 0.5;
+}
+
+/* Application Placeholders */
+.application-website {
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(45deg, var(--primary-teal), var(--primary-blue));
+}
+
+.application-social {
+  width: 100%;
+  height: 200px;
+  background: var(--primary-black);
+}
+
+.application-email {
+  width: 100%;
+  height: 200px;
+  background: white;
+  border: 1px solid #eee;
+  color: var(--primary-black);
+}
+
+.application-mobile {
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(to bottom, var(--secondary-light-gray), var(--primary-black));
+}
+
+.application-business-card {
+  width: 100%;
+  height: 200px;
+  background: var(--primary-black);
+  position: relative;
+}
+
+.application-business-card::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 20px;
+  background: linear-gradient(to right, var(--primary-teal), var(--primary-blue));
+}
+
+.application-letterhead {
+  width: 100%;
+  height: 200px;
+  background: white;
+  border: 1px solid #eee;
+  position: relative;
+  color: var(--primary-black);
+}
+
+.application-letterhead::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 20px;
+  background: linear-gradient(to right, var(--primary-teal), var(--primary-blue));
+}
+
+.application-brochure {
+  width: 100%;
+  height: 200px;
+  background: white;
+  border: 1px solid #eee;
+  position: relative;
+  color: var(--primary-black);
+}
+
+.application-presentation {
+  width: 100%;
+  height: 200px;
+  background: var(--primary-black);
+}
+
+.application-apparel {
+  width: 100%;
+  height: 200px;
+  background: var(--primary-black);
+}
+
+.application-accessories {
+  width: 100%;
+  height: 200px;
+  background: var(--secondary-light-gray);
+}
+
+.application-office {
+  width: 100%;
+  height: 200px;
+  background: white;
+  border: 1px solid #eee;
+  color: var(--primary-black);
+}
+
+.application-promo {
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(45deg, var(--primary-teal), var(--primary-blue));
+}
+
+/* Card Placeholder */
+.card-placeholder {
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(45deg, #f5f5f5, #e0e0e0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  font-style: italic;
+}

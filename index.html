@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Boxcar Brand Guide</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/placeholders.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- GSAP Animation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="#" class="logo-link">
+                <img src="assets/images/white-logo.svg" alt="Project Boxcar Logo" class="logo">
+            </a>
+            <nav class="nav">
+                <a href="#logo" class="nav-item">Logo</a>
+                <a href="#colors" class="nav-item">Colors</a>
+                <a href="#typography" class="nav-item">Typography</a>
+                <a href="#products" class="nav-item">Products</a>
+                <a href="#ui-components" class="nav-item">UI Components</a>
+                <a href="#applications" class="nav-item">Applications</a>
+            </nav>
+            <button class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-title">Project Boxcar Brand Guide</h1>
+            <p class="hero-subtitle">A comprehensive guide to our brand identity and design system</p>
+        </div>
+    </section>
+
+    <!-- Logo Section -->
+    <section id="logo" class="section">
+        <div class="container">
+            <h2 class="section-title">Logo System</h2>
+            <p class="text-center mb-xl">Our logo represents the core of our brand identity. Use it consistently across all touchpoints to build brand recognition.</p>
+            
+            <div class="tabs">
+                <div class="tab active" data-target="logo-variations">Logo Variations</div>
+                <div class="tab" data-target="logo-clearspace">Clearspace & Sizing</div>
+                <div class="tab" data-target="logo-usage">Usage Guidelines</div>
+            </div>
+            
+            <div id="logo-variations" class="tab-content active">
+                <div class="logo-grid">
+                    <div class="logo-item">
+                        <h4>Primary Logo</h4>
+                        <div class="logo-preview">
+                            <img src="assets/images/black-logo.svg" alt="Project Boxcar Primary Logo">
+                        </div>
+                        <div class="logo-info">
+                            <p>The primary logo should be used whenever possible. It includes our wordmark and symbol.</p>
+                            <button class="btn btn-outline background-toggle">View on Dark Background</button>
+                        </div>
+                    </div>
+                    <div class="logo-item">
+                        <h4>White Logo</h4>
+                        <div class="logo-preview dark">
+                            <img src="assets/images/white-logo.svg" alt="Project Boxcar White Logo">
+                        </div>
+                        <div class="logo-info">
+                            <p>The white logo should be used on dark backgrounds or colored backgrounds.</p>
+                            <button class="btn btn-outline background-toggle">View on Light Background</button>
+                        </div>
+                    </div>
+                    <div class="logo-item">
+                        <h4>Symbol Only</h4>
+                        <div class="logo-preview">
+                            <img src="assets/images/black-symbol.svg" alt="Project Boxcar Symbol">
+                        </div>
+                        <div class="logo-info">
+                            <p>The symbol can be used as a standalone element in specific contexts where the full logo won't fit.</p>
+                            <button class="btn btn-outline background-toggle">View on Dark Background</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="logo-clearspace" class="tab-content">
+                <div class="row">
+                    <div class="col">
+                        <h3>Clearspace</h3>
+                        <p>Always maintain adequate clearspace around the logo to ensure visibility and impact. The minimum clearspace is equal to the height of the "X" in the logo.</p>
+                        <img src="assets/images/logo-clearspace.svg" alt="Logo Clearspace Diagram" class="mb-lg">
+                    </div>
+                    <div class="col">
+                        <h3>Minimum Size</h3>
+                        <p>To maintain legibility, never reproduce the logo smaller than the minimum sizes specified below:</p>
+                        <ul>
+                            <li>Primary Logo: 100px wide for digital, 35mm for print</li>
+                            <li>Symbol Only: 30px wide for digital, 10mm for print</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="logo-usage" class="tab-content">
+                <h3>Do's and Don'ts</h3>
+                <div class="row mb-xl">
+                    <div class="col">
+                        <h4>Do</h4>
+                        <ul>
+                            <li>Use the logo in its original proportions</li>
+                            <li>Maintain adequate clearspace around the logo</li>
+                            <li>Use the white version on dark or colored backgrounds</li>
+                            <li>Use the symbol alone when appropriate</li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h4>Don't</h4>
+                        <ul>
+                            <li>Stretch or distort the logo</li>
+                            <li>Change the logo colors</li>
+                            <li>Add effects like shadows or glows</li>
+                            <li>Place the logo on busy backgrounds</li>
+                            <li>Rotate or flip the logo</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <h3>Logo Downloads</h3>
+                <p>Download the logo in various formats for different applications:</p>
+                <div class="row">
+                    <div class="col">
+                        <h4>Vector Formats</h4>
+                        <ul>
+                            <li><a href="#">SVG - Primary Logo</a></li>
+                            <li><a href="#">SVG - White Logo</a></li>
+                            <li><a href="#">SVG - Symbol Only</a></li>
+                            <li><a href="#">AI - All Variations</a></li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h4>Raster Formats</h4>
+                        <ul>
+                            <li><a href="#">PNG - Primary Logo</a></li>
+                            <li><a href="#">PNG - White Logo</a></li>
+                            <li><a href="#">PNG - Symbol Only</a></li>
+                            <li><a href="#">JPG - All Variations</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Color Palette Section -->
+    <section id="colors" class="section">
+        <div class="container">
+            <h2 class="section-title">Color Palette</h2>
+            <p class="text-center mb-xl">Our color palette reflects our brand personality: innovative, trustworthy, and forward-thinking.</p>
+            
+            <div class="tabs">
+                <div class="tab active" data-target="primary-colors">Primary Colors</div>
+                <div class="tab" data-target="secondary-colors">Secondary Colors</div>
+                <div class="tab" data-target="gradients">Gradients</div>
+                <div class="tab" data-target="color-usage">Color Usage</div>
+            </div>
+            
+            <div id="primary-colors" class="tab-content active">
+                <h3 class="mb-lg">Primary Colors</h3>
+                <div class="color-grid">
+                    <div class="color-item">
+                        <div class="color-preview" style="background-color: #00dbdb;">
+                            Teal
+                        </div>
+                        <div class="color-info">
+                            <div class="color-name">Primary Teal</div>
+                            <div class="color-value">#00dbdb</div>
+                            <div class="color-value">RGB: 0, 219, 219</div>
+                            <div class="color-value">CMYK: 100, 0, 0, 14</div>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color-preview" style="background-color: #00a2e5;">
+                            Blue
+                        </div>
+                        <div class="color-info">
+                            <div class="color-name">Primary Blue</div>
+                            <div class="color-value">#00a2e5</div>
+                            <div class="color-value">RGB: 0, 162, 229</div>
+                            <div class="color-value">CMYK: 100, 29, 0, 10</div>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color-preview" style="background-color: #1a1a1a; color: white;">
+                            Black
+                        </div>
+                        <div class="color-info">
+                            <div class="color-name">Primary Black</div>
+                            <div class="color-value">#1a1a1a</div>
+                            <div class="color-value">RGB: 26, 26, 26</div>
+                            <div class="color-value">CMYK: 0, 0, 0, 90</div>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color-preview" style="background-color: #ffffff; color: #1a1a1a; border: 1px solid #eee;">
+                            White
+                        </div>
+                        <div class="color-info">
+                            <div class="color-name">Primary White</div>
+                            <div class="color-value">#ffffff</div>
+                            <div class="color-value">RGB: 255, 255, 255</div>
+                            <div class="color-value">CMYK: 0, 0, 0, 0</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="secondary-colors" class="tab-content">
+                <h3 class="mb-lg">Secondary Colors</h3>
+                <div class="color-grid">
+                    <div class="color-item">
+                        <div class="color-preview" style="background-color: #242424; color: white;">
+                            Dark Gray
+                        </div>
+                        <div class="color-info">
+                            <div class="color-name">Dark Gray</div>
+                            <div class="color-value">#242424</div>
+                            <div class="color-value">RGB: 36, 36, 36</div>
+                            <div class="color-value">CMYK: 0, 0, 0, 86</div>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color-preview" style="background-color: #343434; color: white;">
+                            Medium Gray
+                        </div>
+                        <div class="color-info">
+                            <div class="color-name">Medium Gray</div>
+                            <div class="color-value">#343434</div>
+                            <div class="color-value">RGB: 52, 52, 52</div>
+                            <div class="color-value">CMYK: 0, 0, 0, 80</div>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color-preview" style="background-color: #3a3a3a; color: white;">
+                            Light Gray
+                        </div>
+                        <div class="color-info">
+                            <div class="color-name">Light Gray</div>
+                            <div class="color-value">#3a3a3a</div>
+                            <div class="color-value">RGB: 58, 58, 58</div>
+                            <div class="color-value">CMYK: 0, 0, 0, 77</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="gradients" class="tab-content">
+                <h3 class="mb-lg">Gradients</h3>
+                <div class="color-grid">
+                    <div class="color-item">
+                        <div class="color-preview" style="background: linear-gradient(to bottom, #00dbdb, #00a2e5);">
+                            Primary Gradient
+                        </div>
+                        <div class="color-info">
+                            <div class="color-name">Primary Gradient</div>
+                            <div class="color-value">Teal to Blue</div>
+                            <div class="color-value">Start: #00dbdb</div>
+                            <div class="color-value">End: #00a2e5</div>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color-preview" style="background: linear-gradient(to bottom, #3a3a3a, #1a1a1a);">
+                            Dark Gradient
+                        </div>
+                        <div class="color-info">
+                            <div class="color-name">Dark Gradient</div>
+                            <div class="color-value">Light Gray to Black</div>
+                            <div class="color-value">Start: #3a3a3a</div>
+                            <div class="color-value">End: #1a1a1a</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <h3 class="mb-md">CSS Implementation</h3>
+                <div class="code-block">
+                    <code>
+/* Primary Gradient */
+background: linear-gradient(to bottom, #00dbdb, #00a2e5);
+
+/* Dark Gradient */
+background: linear-gradient(to bottom, #3a3a3a, #1a1a1a);
+                    </code>
+                </div>
+            </div>
+            
+            <div id="color-usage" class="tab-content">
+                <h3>Color Usage Guidelines</h3>
+                <div class="row mb-xl">
+                    <div class="col">
+                        <h4>Primary Colors</h4>
+                        <p>Our primary colors should be used for:</p>
+                        <ul>
+                            <li>Teal: Accents, buttons, links, highlights</li>
+                            <li>Blue: Secondary accents, gradients, icons</li>
+                            <li>Black: Text, backgrounds, UI elements</li>
+                            <li>White: Backgrounds, text on dark colors</li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h4>Secondary Colors</h4>
+                        <p>Our secondary grays should be used for:</p>
+                        <ul>
+                            <li>Dark Gray: Secondary text, backgrounds</li>
+                            <li>Medium Gray: Borders, dividers, inactive states</li>
+                            <li>Light Gray: Subtle backgrounds, disabled states</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <h3>Color Contrast Checker</h3>
+                <p>Use this tool to check if your color combinations meet accessibility standards:</p>
+                <form id="contrast-checker-form" class="mb-md">
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="color1" class="form-label">Background Color</label>
+                                <input type="text" id="color1" class="form-input" placeholder="#00dbdb" value="#00dbdb">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="color2" class="form-label">Text Color</label>
+                                <input type="text" id="color2" class="form-input" placeholder="#1a1a1a" value="#1a1a1a">
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Check Contrast</button>
+                </form>
+                <div id="contrast-result"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Typography Section -->
+    <section id="typography" class="section">
+        <div class="container">
+            <h2 class="section-title">Typography</h2>
+            <p class="text-center mb-xl">Our typography system is designed for clarity, readability, and brand consistency.</p>
+            
+            <div class="tabs">
+                <div class="tab active" data-target="font-families">Font Families</div>
+                <div class="tab" data-target="type-hierarchy">Type Hierarchy</div>
+                <div class="tab" data-target="type-usage">Typography Usage</div>
+            </div>
+            
+            <div id="font-families" class="tab-content active">
+                <div class="row">
+                    <div class="col">
+                        <div class="typography-sample">
+                            <h3 class="mb-md">Primary Font: Inter</h3>
+                            <div class="font-family" style="font-family: 'Inter', sans-serif;">
+                                <div class="font-sample" style="font-weight: 300;">Inter Light (300) - The quick brown fox jumps over the lazy dog.</div>
+                                <div class="font-sample" style="font-weight: 400;">Inter Regular (400) - The quick brown fox jumps over the lazy dog.</div>
+                                <div class="font-sample" style="font-weight: 500;">Inter Medium (500) - The quick brown fox jumps over the lazy dog.</div>
+                                <div class="font-sample" style="font-weight: 600;">Inter SemiBold (600) - The quick brown fox jumps over the lazy dog.</div>
+                                <div class="font-sample" style="font-weight: 700;">Inter Bold (700) - The quick brown fox jumps over the lazy dog.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="typography-sample">
+                            <h3 class="mb-md">Secondary Font: Roboto</h3>
+                            <div class="font-family" style="font-family: 'Roboto', sans-serif;">
+                                <div class="font-sample" style="font-weight: 300;">Roboto Light (300) - The quick brown fox jumps over the lazy dog.</div>
+                                <div class="font-sample" style="font-weight: 400;">Roboto Regular (400) - The quick brown fox jumps over the lazy dog.</div>
+                                <div class="font-sample" style="font-weight: 500;">Roboto Medium (500) - The quick brown fox jumps over the lazy dog.</div>
+                                <div class="font-sample" style="font-weight: 700;">Roboto Bold (700) - The quick brown fox jumps over the lazy dog.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <h3 class="mb-md">Font Implementation</h3>
+                <div class="code-block">
+                    <code>
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+/* CSS Variables */
+:root {
+  --font-primary: 'Inter', sans-serif;
+  --font-secondary: 'Roboto', sans-serif;
+}
+                    </code>
+                </div>
+            </div>
+            
+            <div id="type-hierarchy" class="tab-content">
+                <h3 class="mb-lg">Type Scale</h3>
+                <div class="typography-sample">
+                    <h1>Heading 1 (2.5rem)</h1>
+                    <h2>Heading 2 (2rem)</h2>
+                    <h3>Heading 3 (1.75rem)</h3>
+                    <h4>Heading 4 (1.5rem)</h4>
+                    <h5>Heading 5 (1.25rem)</h5>
+                    <h6>Heading 6 (1rem)</h6>
+                    <p>Body Text (1rem) - The quick brown fox jumps over the lazy dog.</p>
+                    <p><small>Small Text (0.875rem) - The quick brown fox jumps over the lazy dog.</small></p>
+                </div>
+                
+                <h3 class="mb-md">CSS Implementation</h3>
+                <div class="code-block">
+                    <code>
+h1 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 2rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+h6 {
+  font-size: 1rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+small {
+  font-size: 0.875rem;
+}
+                    </code>
+                </div>
+            </div>
+            
+            <div id="type-usage" class="tab-content">
+                <h3>Typography Usage Guidelines</h3>
+                <div class="row mb-xl">
+                    <div class="col">
+                        <h4>Primary Font (Inter)</h4>
+                        <p>Use Inter for:</p>
+                        <ul>
+                            <li>Headings and titles</li>
+                            <li>Navigation</li>
+                            <li>Buttons</li>
+                            <li>UI elements</li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h4>Secondary Font (Roboto)</h4>
+                        <p>Use Roboto for:</p>
+                        <ul>
+                            <li>Body text</li>
+                            <li>Long-form content</li>
+                            <li>Captions</li>
+                            <li>Secondary information</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <h3>Typography Tester</h3>
+                <p>Use this tool to test different typography combinations:</p>
+                <div class="row mb-md">
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="font-select" class="form-label">Font Family</label>
+                            <select id="font-select" class="form-input">
+                                <option value="'Inter', sans-serif">Inter</option>
+                                <option value="'Roboto', sans-serif">Roboto</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="weight-select" class="form-label">Font Weight</label>
+                            <select id="weight-select" class="form-input">
+                                <option value="300">Light (300)</option>
+                                <option value="400" selected>Regular (400)</option>
+                                <option value="500">Medium (500)</option>
+                                <option value="600">SemiBold (600)</option>
+                                <option value="700">Bold (700)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="size-input" class="form-label">Font Size (px)</label>
+                            <input type="number" id="size-input" class="form-input" value="16" min="8" max="72">
+                        </div>
+                    </div>
+                </div>
+                <div id="typography-sample-text" class="mb-md" style="font-family: 'Inter', sans-serif; font-weight: 400; font-size: 16px;">
+                    The quick brown fox jumps over the lazy dog. 0123456789
+                </div>
+                <div class="code-block">
+                    <code id="typography-code-snippet">
+font-family: 'Inter', sans-serif;
+font-weight: 400;
+font-size: 16px;
+                    </code>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Branding Section -->
+    <section id="products" class="section">
+        <div class="container">
+            <h2 class="section-title">Product Branding</h2>
+            <p class="text-center mb-xl">Our product suite follows a consistent branding approach while maintaining individual identity.</p>
+            
+            <div class="tabs">
+                <div class="tab active" data-target="product-logos">Product Logos</div>
+                <div class="tab" data-target="product-relationships">Brand Relationships</div>
+            </div>
+            
+            <div id="product-logos" class="tab-content active">
+                <div class="logo-grid">
+                    <div class="logo-item">
+                        <h4>Boxcore</h4>
+                        <div class="logo-preview">
+                            <img src="assets/images/product-boxcore.svg" alt="Boxcore Logo">
+                        </div>
+                        <div class="logo-info">
+                            <p>Core platform for AI-powered development.</p>
+                            <button class="btn btn-outline background-toggle">View on Dark Background</button>
+                        </div>
+                    </div>
+                    <div class="logo-item">
+                        <h4>BX Studio</h4>
+                        <div class="logo-preview">
+                            <img src="assets/images/product-bx-studio.svg" alt="BX Studio Logo">
+                        </div>
+                        <div class="logo-info">
+                            <p>Development environment for AI applications.</p>
+                            <button class="btn btn-outline background-toggle">View on Dark Background</button>
+                        </div>
+                    </div>
+                    <div class="logo-item">
+                        <h4>Boxcar Lingo</h4>
+                        <div class="logo-preview">
+                            <img src="assets/images/product-lingo.svg" alt="Boxcar Lingo Logo">
+                        </div>
+                        <div class="logo-info">
+                            <p>Natural language processing tool.</p>
+                            <button class="btn btn-outline background-toggle">View on Dark Background</button>
+                        </div>
+                    </div>
+                    <div class="logo-item">
+                        <h4>Boxcar Twin</h4>
+                        <div class="logo-preview">
+                            <img src="assets/images/product-twin.svg" alt="Boxcar Twin Logo">
+                        </div>
+                        <div class="logo-info">
+                            <p>Digital twin technology for AI models.</p>
+                            <button class="btn btn-outline background-toggle">View on Dark Background</button>
+                        </div>
+                    </div>
+                    <div class="logo-item">
+                        <h4>WaveSight</h4>
+                        <div class="logo-preview">
+                            <img src="assets/images/product-wavesight.svg" alt="WaveSight Logo">
+                        </div>
+                        <div class="logo-info">
+                            <p>AI-powered analytics and visualization.</p>
+                            <button class="btn btn-outline background-toggle">View on Dark Background</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="product-relationships" class="tab-content">
+                <h3 class="mb-lg">Brand Architecture</h3>
+                <p>Project Boxcar follows a branded house architecture, where all products share common design elements while maintaining their individual identities.</p>
+                
+                <h4 class="mb-md">Brand Hierarchy</h4>
+                <ul class="mb-xl">
+                    <li><strong>Master Brand:</strong> Project Boxcar</li>
+                    <li><strong>Product Brands:</strong> Boxcore, BX Studio, Boxcar Lingo, Boxcar Twin, WaveSight</li>
+                </ul>
+                
+                <h4 class="mb-md">Co-branding Guidelines</h4>
+                <p>When displaying multiple product brands together:</p>
+                <ul>
+                    <li>Maintain consistent spacing between logos</li>
+                    <li>Align logos by their baseline</li>
+                    <li>Use the same background color for all logos</li>
+                    <li>Maintain the master brand (Project Boxcar) prominence</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- UI Components Section -->
+    <section id="ui-components" class="section">
+        <div class="container">
+            <h2 class="section-title">UI Components</h2>
+            <p class="text-center mb-xl">Our UI components are designed for consistency, usability, and brand alignment.</p>
+            
+            <div class="tabs">
+                <div class="tab active" data-target="buttons">Buttons</div>
+                <div class="tab" data-target="forms">Forms</div>
+                <div class="tab" data-target="cards">Cards</div>
+                <div class="tab" data-target="navigation">Navigation</div>
+            </div>
+            
+            <div id="buttons" class="tab-content active">
+                <h3 class="mb-lg">Button Styles</h3>
+                <div class="component-grid">
+                    <div class="component-item">
+                        <h4 class="component-title">Primary Button</h4>
+                        <button class="btn btn-primary">Primary Button</button>
+                        <div class="code-block mt-md">
+                            <code>
+<button class="btn btn-primary">Primary Button</button>
+                            </code>
+                        </div>
+                    </div>
+                    <div class="component-item">
+                        <h4 class="component-title">Secondary Button</h4>
+                        <button class="btn btn-secondary">Secondary Button</button>
+                        <div class="code-block mt-md">
+                            <code>
+<button class="btn btn-secondary">Secondary Button</button>
+                            </code>
+                        </div>
+                    </div>
+                    <div class="component-item">
+                        <h4 class="component-title">Outline Button</h4>
+                        <button class="btn btn-outline">Outline Button</button>
+                        <div class="code-block mt-md">
+                            <code>
+<button class="btn btn-outline">Outline Button</button>
+                            </code>
+                        </div>
+                    </div>
+                </div>
+                
+                <h3 class="mb-lg mt-xl">Button States</h3>
+                <div class="component-grid">
+                    <div class="component-item">
+                        <h4 class="component-title">Hover State</h4>
+                        <button class="btn btn-primary" style="opacity: 0.9;">Primary Button (Hover)</button>
+                        <div class="code-block mt-md">
+                            <code>
+.btn-primary:hover {
+  opacity: 0.9;
+}
+                            </code>
+                        </div>
+                    </div>
+                    <div class="component-item">
+                        <h4 class="component-title">Disabled State</h4>
+                        <button class="btn btn-primary" style="opacity: 0.5; cursor: not-allowed;">Primary Button (Disabled)</button>
+                        <div class="code-block mt-md">
+                            <code>
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+                            </code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="forms" class="tab-content">
+                <h3 class="mb-lg">Form Elements</h3>
+                <div class="component-grid">
+                    <div class="component-item">
+                        <h4 class="component-title">Text Input</h4>
+                        <div class="form-group">
+                            <label for="text-input" class="form-label">Text Input</label>
+                            <input type="text" id="text-input" class="form-input" placeholder="Enter text">
+                        </div>
+                        <div class="code-block mt-md">
+                            <code>
+<div class="form-group">
+  <label for="input-id" class="form-label">Label</label>
+  <input type="text" id="input-id" class="form-input" placeholder="Placeholder">
+</div>
+                            </code>
+                        </div>
+                    </div>
+                    <div class="component-item">
+                        <h4 class="component-title">Select Input</h4>
+                        <div class="form-group">
+                            <label for="select-input" class="form-label">Select Input</label>
+                            <select id="select-input" class="form-input">
+                                <option>Option 1</option>
+                                <option>Option 2</option>
+                                <option>Option 3</option>
+                            </select>
+                        </div>
+                        <div class="code-block mt-md">
+                            <code>
+<div class="form-group">
+  <label for="select-id" class="form-label">Label</label>
+  <select id="select-id" class="form-input">
+    <option>Option 1</option>
+    <option>Option 2</option>
+  </select>
+</div>
+                            </code>
+                        </div>
+                    </div>
+                    <div class="component-item">
+                        <h4 class="component-title">Textarea</h4>
+                        <div class="form-group">
+                            <label for="textarea-input" class="form-label">Textarea</label>
+                            <textarea id="textarea-input" class="form-input" rows="3" placeholder="Enter text"></textarea>
+                        </div>
+                        <div class="code-block mt-md">
+                            <code>
+<div class="form-group">
+  <label for="textarea-id" class="form-label">Label</label>
+  <textarea id="textarea-id" class="form-input" rows="3" placeholder="Placeholder"></textarea>
+</div>
+                            </code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="cards" class="tab-content">
+                <h3 class="mb-lg">Card Components</h3>
+                <div class="component-grid">
+                    <div class="component-item">
+                        <h4 class="component-title">Basic Card</h4>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Card Title</h5>
+                                <p>This is a basic card with just a title and text content.</p>
+                            </div>
+                        </div>
+                        <div class="code-block mt-md">
+                            <code>
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">Card Title</h5>
+    <p>Card content goes here.</p>
+  </div>
+</div>
+                            </code>
+                        </div>
+                    </div>
+                    <div class="component-item">
+                        <h4 class="component-title">Card with Image</h4>
+                        <div class="card">
+                            <img src="assets/images/card-placeholder.jpg" alt="Card image" class="card-img">
+                            <div class="card-body">
+                                <h5 class="card-title">Card with Image</h5>
+                                <p>This card includes an image at the top.</p>
+                            </div>
+                        </div>
+                        <div class="code-block mt-md">
+                            <code>
+<div class="card">
+  <img src="image.jpg" alt="Card image" class="card-img">
+  <div class="card-body">
+    <h5 class="card-title">Card Title</h5>
+    <p>Card content goes here.</p>
+  </div>
+</div>
+                            </code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="navigation" class="tab-content">
+                <h3 class="mb-lg">Navigation Components</h3>
+                <div class="component-grid">
+                    <div class="component-item">
+                        <h4 class="component-title">Horizontal Navigation</h4>
+                        <nav class="nav">
+                            <a href="#" class="nav-item">Home</a>
+                            <a href="#" class="nav-item">Products</a>
+                            <a href="#" class="nav-item">About</a>
+                            <a href="#" class="nav-item">Contact</a>
+                        </nav>
+                        <div class="code-block mt-md">
+                            <code>
+<nav class="nav">
+  <a href="#" class="nav-item">Home</a>
+  <a href="#" class="nav-item">Products</a>
+  <a href="#" class="nav-item">About</a>
+  <a href="#" class="nav-item">Contact</a>
+</nav>
+                            </code>
+                        </div>
+                    </div>
+                    <div class="component-item">
+                        <h4 class="component-title">Tabs</h4>
+                        <div class="tabs">
+                            <div class="tab active">Tab 1</div>
+                            <div class="tab">Tab 2</div>
+                            <div class="tab">Tab 3</div>
+                        </div>
+                        <div class="code-block mt-md">
+                            <code>
+<div class="tabs">
+  <div class="tab active" data-target="tab1">Tab 1</div>
+  <div class="tab" data-target="tab2">Tab 2</div>
+  <div class="tab" data-target="tab3">Tab 3</div>
+</div>
+
+<div id="tab1" class="tab-content active">Content 1</div>
+<div id="tab2" class="tab-content">Content 2</div>
+<div id="tab3" class="tab-content">Content 3</div>
+                            </code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Applications Section -->
+    <section id="applications" class="section">
+        <div class="container">
+            <h2 class="section-title">Brand Applications</h2>
+            <p class="text-center mb-xl">See how our brand elements come together across different applications.</p>
+            
+            <div class="tabs">
+                <div class="tab active" data-target="digital-applications">Digital</div>
+                <div class="tab" data-target="print-applications">Print</div>
+                <div class="tab" data-target="merchandise">Merchandise</div>
+            </div>
+            
+            <div id="digital-applications" class="tab-content active">
+                <h3 class="mb-lg">Digital Applications</h3>
+                <div class="row">
+                    <div class="col">
+                        <h4>Website</h4>
+                        <div class="application-website placeholder mb-md">Website</div>
+                        <p>Our website uses the full brand color palette with the primary gradient for accents and calls-to-action.</p>
+                    </div>
+                    <div class="col">
+                        <h4>Social Media</h4>
+                        <div class="application-social placeholder mb-md">Social Media</div>
+                        <p>Social media profiles use our logo consistently with the dark background for maximum impact.</p>
+                    </div>
+                </div>
+                <div class="row mt-xl">
+                    <div class="col">
+                        <h4>Email</h4>
+                        <div class="application-email placeholder mb-md">Email</div>
+                        <p>Email templates follow our typography hierarchy and use our primary colors for buttons and links.</p>
+                    </div>
+                    <div class="col">
+                        <h4>Mobile App</h4>
+                        <div class="application-mobile placeholder mb-md">Mobile App</div>
+                        <p>Our mobile app uses the brand colors and typography consistently across all screens.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="print-applications" class="tab-content">
+                <h3 class="mb-lg">Print Applications</h3>
+                <div class="row">
+                    <div class="col">
+                        <h4>Business Cards</h4>
+                        <div class="application-business-card placeholder mb-md">Business Card</div>
+                        <p>Business cards use our primary black with the gradient accent for a professional look.</p>
+                    </div>
+                    <div class="col">
+                        <h4>Letterhead</h4>
+                        <div class="application-letterhead placeholder mb-md">Letterhead</div>
+                        <p>Letterhead uses our logo at the top with a subtle gradient accent at the bottom.</p>
+                    </div>
+                </div>
+                <div class="row mt-xl">
+                    <div class="col">
+                        <h4>Brochures</h4>
+                        <div class="application-brochure placeholder mb-md">Brochure</div>
+                        <p>Brochures use our full color palette with plenty of white space for readability.</p>
+                    </div>
+                    <div class="col">
+                        <h4>Presentations</h4>
+                        <div class="application-presentation placeholder mb-md">Presentation</div>
+                        <p>Presentation templates follow our typography hierarchy and use our colors consistently.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="merchandise" class="tab-content">
+                <h3 class="mb-lg">Merchandise</h3>
+                <div class="row">
+                    <div class="col">
+                        <h4>Apparel</h4>
+                        <div class="application-apparel placeholder mb-md">Apparel</div>
+                        <p>T-shirts and hoodies use our logo prominently on dark backgrounds for maximum impact.</p>
+                    </div>
+                    <div class="col">
+                        <h4>Accessories</h4>
+                        <div class="application-accessories placeholder mb-md">Accessories</div>
+                        <p>Accessories like hats and bags use our logo in various formats depending on the application.</p>
+                    </div>
+                </div>
+                <div class="row mt-xl">
+                    <div class="col">
+                        <h4>Office Items</h4>
+                        <div class="application-office placeholder mb-md">Office Items</div>
+                        <p>Notebooks, pens, and other office items use our colors and logo consistently.</p>
+                    </div>
+                    <div class="col">
+                        <h4>Promotional Items</h4>
+                        <div class="application-promo placeholder mb-md">Promotional Items</div>
+                        <p>Promotional items like water bottles and stickers use our logo and colors for brand recognition.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <img src="assets/images/white-logo.svg" alt="Project Boxcar Logo" class="footer-logo">
+            <p class="footer-text">© 2025 Project Boxcar. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>
