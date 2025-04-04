@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/placeholders.css">
     <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/download-icons.css">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,8 +42,10 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1 class="hero-title">Project Boxcar Brand Guide</h1>
-            <p class="hero-subtitle">A comprehensive guide to our brand identity and design system</p>
+            <div class="hero-content">
+                <h1 class="hero-title">Project Boxcar Brand Guide</h1>
+                <p class="hero-subtitle">A comprehensive guide to our brand identity and design system. Designed to establish consistency across all touchpoints and provide a single source of truth.</p>
+            </div>
         </div>
     </section>
 
@@ -50,7 +53,7 @@
     <section id="logo" class="section">
         <div class="container">
             <h2 class="section-title">Logo System</h2>
-            <p class="text-center mb-xl">Our logo represents the core of our brand identity. Use it consistently across all touchpoints to build brand recognition.</p>
+            <p class="mb-xl">Our logo represents the core of our brand identity. Use it consistently across all touchpoints to build brand recognition.</p>
             
             <div class="tabs">
                 <div class="tab active" data-target="logo-variations">Logo Variations</div>
@@ -64,6 +67,13 @@
                         <h4>Primary Logo</h4>
                         <div class="logo-preview">
                             <img src="assets/images/black-logo.svg" alt="Project Boxcar Primary Logo">
+                            <button class="download-icon" data-file="assets/images/black-logo.svg" title="Download SVG">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+                            </button>
+                            <button class="copy-icon" data-file="assets/images/black-logo.svg" title="Copy SVG Code">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+                            </button>
+                            <div class="tooltip">Copied!</div>
                         </div>
                         <div class="logo-info">
                             <p>The primary logo should be used whenever possible. It includes our wordmark and symbol.</p>
@@ -74,6 +84,13 @@
                         <h4>White Logo</h4>
                         <div class="logo-preview dark">
                             <img src="assets/images/white-logo.svg" alt="Project Boxcar White Logo">
+                            <button class="download-icon" data-file="assets/images/white-logo.svg" title="Download SVG">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+                            </button>
+                            <button class="copy-icon" data-file="assets/images/white-logo.svg" title="Copy SVG Code">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+                            </button>
+                            <div class="tooltip">Copied!</div>
                         </div>
                         <div class="logo-info">
                             <p>The white logo should be used on dark backgrounds or colored backgrounds.</p>
@@ -84,6 +101,13 @@
                         <h4>Symbol Only</h4>
                         <div class="logo-preview">
                             <img src="assets/images/black-symbol.svg" alt="Project Boxcar Symbol">
+                            <button class="download-icon" data-file="assets/images/black-symbol.svg" title="Download SVG">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+                            </button>
+                            <button class="copy-icon" data-file="assets/images/black-symbol.svg" title="Copy SVG Code">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+                            </button>
+                            <div class="tooltip">Copied!</div>
                         </div>
                         <div class="logo-info">
                             <p>The symbol can be used as a standalone element in specific contexts where the full logo won't fit.</p>
@@ -98,7 +122,7 @@
                     <div class="col">
                         <h3>Clearspace</h3>
                         <p>Always maintain adequate clearspace around the logo to ensure visibility and impact. The minimum clearspace is equal to the height of the "X" in the logo.</p>
-                        <img src="assets/images/logo-clearspace.svg" alt="Logo Clearspace Diagram" class="mb-lg">
+                        <div class="placeholder mb-lg" style="height: 150px;">Logo Clearspace Diagram</div>
                     </div>
                     <div class="col">
                         <h3>Minimum Size</h3>
@@ -165,7 +189,7 @@
     <section id="colors" class="section">
         <div class="container">
             <h2 class="section-title">Color Palette</h2>
-            <p class="text-center mb-xl">Our color palette reflects our brand personality: innovative, trustworthy, and forward-thinking.</p>
+            <p class="mb-xl">Our color palette reflects our brand personality: innovative, trustworthy, and forward-thinking.</p>
             
             <div class="tabs">
                 <div class="tab active" data-target="primary-colors">Primary Colors</div>
@@ -354,7 +378,7 @@ background: linear-gradient(to bottom, #3a3a3a, #1a1a1a);
     <section id="typography" class="section">
         <div class="container">
             <h2 class="section-title">Typography</h2>
-            <p class="text-center mb-xl">Our typography system is designed for clarity, readability, and brand consistency.</p>
+            <p class="mb-xl">Our typography system is designed for clarity, readability, and brand consistency.</p>
             
             <div class="tabs">
                 <div class="tab active" data-target="font-families">Font Families</div>
@@ -545,7 +569,7 @@ font-size: 16px;
     <section id="products" class="section">
         <div class="container">
             <h2 class="section-title">Product Branding</h2>
-            <p class="text-center mb-xl">Our product suite follows a consistent branding approach while maintaining individual identity.</p>
+            <p class="mb-xl">Our product suite follows a consistent branding approach while maintaining individual identity.</p>
             
             <div class="tabs">
                 <div class="tab active" data-target="product-logos">Product Logos</div>
@@ -558,6 +582,13 @@ font-size: 16px;
                         <h4>Boxcore</h4>
                         <div class="logo-preview">
                             <img src="assets/images/product-boxcore.svg" alt="Boxcore Logo">
+                            <button class="download-icon" data-file="assets/images/product-boxcore.svg" title="Download SVG">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+                            </button>
+                            <button class="copy-icon" data-file="assets/images/product-boxcore.svg" title="Copy SVG Code">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+                            </button>
+                            <div class="tooltip">Copied!</div>
                         </div>
                         <div class="logo-info">
                             <p>Core platform for AI-powered development.</p>
@@ -568,6 +599,13 @@ font-size: 16px;
                         <h4>BX Studio</h4>
                         <div class="logo-preview">
                             <img src="assets/images/product-bx-studio.svg" alt="BX Studio Logo">
+                            <button class="download-icon" data-file="assets/images/product-bx-studio.svg" title="Download SVG">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+                            </button>
+                            <button class="copy-icon" data-file="assets/images/product-bx-studio.svg" title="Copy SVG Code">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+                            </button>
+                            <div class="tooltip">Copied!</div>
                         </div>
                         <div class="logo-info">
                             <p>Development environment for AI applications.</p>
@@ -578,6 +616,13 @@ font-size: 16px;
                         <h4>Boxcar Lingo</h4>
                         <div class="logo-preview">
                             <img src="assets/images/product-lingo.svg" alt="Boxcar Lingo Logo">
+                            <button class="download-icon" data-file="assets/images/product-lingo.svg" title="Download SVG">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+                            </button>
+                            <button class="copy-icon" data-file="assets/images/product-lingo.svg" title="Copy SVG Code">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+                            </button>
+                            <div class="tooltip">Copied!</div>
                         </div>
                         <div class="logo-info">
                             <p>Natural language processing tool.</p>
@@ -588,6 +633,13 @@ font-size: 16px;
                         <h4>Boxcar Twin</h4>
                         <div class="logo-preview">
                             <img src="assets/images/product-twin.svg" alt="Boxcar Twin Logo">
+                            <button class="download-icon" data-file="assets/images/product-twin.svg" title="Download SVG">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+                            </button>
+                            <button class="copy-icon" data-file="assets/images/product-twin.svg" title="Copy SVG Code">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+                            </button>
+                            <div class="tooltip">Copied!</div>
                         </div>
                         <div class="logo-info">
                             <p>Digital twin technology for AI models.</p>
@@ -598,6 +650,13 @@ font-size: 16px;
                         <h4>WaveSight</h4>
                         <div class="logo-preview">
                             <img src="assets/images/product-wavesight.svg" alt="WaveSight Logo">
+                            <button class="download-icon" data-file="assets/images/product-wavesight.svg" title="Download SVG">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+                            </button>
+                            <button class="copy-icon" data-file="assets/images/product-wavesight.svg" title="Copy SVG Code">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+                            </button>
+                            <div class="tooltip">Copied!</div>
                         </div>
                         <div class="logo-info">
                             <p>AI-powered analytics and visualization.</p>
@@ -633,7 +692,7 @@ font-size: 16px;
     <section id="ui-components" class="section">
         <div class="container">
             <h2 class="section-title">UI Components</h2>
-            <p class="text-center mb-xl">Our UI components are designed for consistency, usability, and brand alignment.</p>
+            <p class="mb-xl">Our UI components are designed for consistency, usability, and brand alignment.</p>
             
             <div class="tabs">
                 <div class="tab active" data-target="buttons">Buttons</div>
@@ -785,7 +844,7 @@ font-size: 16px;
                     <div class="component-item">
                         <h4 class="component-title">Card with Image</h4>
                         <div class="card">
-                            <img src="assets/images/card-placeholder.jpg" alt="Card image" class="card-img">
+                            <div class="card-placeholder">Card Image</div>
                             <div class="card-body">
                                 <h5 class="card-title">Card with Image</h5>
                                 <p>This card includes an image at the top.</p>
@@ -858,7 +917,7 @@ font-size: 16px;
     <section id="applications" class="section">
         <div class="container">
             <h2 class="section-title">Brand Applications</h2>
-            <p class="text-center mb-xl">See how our brand elements come together across different applications.</p>
+            <p class="mb-xl">See how our brand elements come together across different applications.</p>
             
             <div class="tabs">
                 <div class="tab active" data-target="digital-applications">Digital</div>
@@ -955,12 +1014,41 @@ font-size: 16px;
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <img src="assets/images/white-logo.svg" alt="Project Boxcar Logo" class="footer-logo">
-            <p class="footer-text">© 2025 Project Boxcar. All rights reserved.</p>
+            <div class="row">
+                <div class="col-8">
+                    <img src="assets/images/white-logo.svg" alt="Project Boxcar Logo" class="footer-logo">
+                    <p class="footer-text">© 2025 Project Boxcar. All rights reserved.</p>
+                    <p class="footer-text">This brand guide serves as the definitive reference for all brand-related assets, guidelines, and implementations.</p>
+                </div>
+                <div class="col-4">
+                    <h4 class="text-white mb-md">Quick Links</h4>
+                    <nav class="footer-nav">
+                        <a href="#logo" class="nav-item">Logo</a>
+                        <a href="#colors" class="nav-item">Colors</a>
+                        <a href="#typography" class="nav-item">Typography</a>
+                        <a href="#products" class="nav-item">Products</a>
+                        <a href="#ui-components" class="nav-item">UI Components</a>
+                        <a href="#applications" class="nav-item">Applications</a>
+                    </nav>
+                </div>
+            </div>
         </div>
     </footer>
 
+    <!-- Add this script for header scroll effect -->
+    <script>
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+
     <script src="js/script.js"></script>
     <script src="js/animations.js"></script>
+    <script src="js/download-icons.js"></script>
 </body>
 </html>

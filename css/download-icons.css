@@ -1,0 +1,94 @@
+/* Asset Download Icons - Modern Approach */
+.logo-preview {
+  position: relative;
+}
+
+.download-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.1);
+  color: var(--secondary-dark-gray);
+  border: none;
+  border-radius: var(--border-radius-sm);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  opacity: 0;
+  z-index: 10;
+}
+
+.logo-preview:hover .download-icon {
+  opacity: 1;
+}
+
+.download-icon:hover {
+  background-color: var(--primary-blue);
+  color: var(--primary-white);
+  transform: translateY(-2px);
+}
+
+.download-icon svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+.copy-icon {
+  position: absolute;
+  top: 10px;
+  right: 50px;
+  background-color: rgba(0, 0, 0, 0.1);
+  color: var(--secondary-dark-gray);
+  border: none;
+  border-radius: var(--border-radius-sm);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  opacity: 0;
+  z-index: 10;
+}
+
+.logo-preview:hover .copy-icon {
+  opacity: 1;
+}
+
+.copy-icon:hover {
+  background-color: var(--primary-teal);
+  color: var(--primary-white);
+  transform: translateY(-2px);
+}
+
+.copy-icon svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+.tooltip {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--primary-black);
+  color: var(--primary-white);
+  padding: 4px 8px;
+  border-radius: var(--border-radius-sm);
+  font-size: var(--text-xs);
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+  pointer-events: none;
+}
+
+.tooltip.show {
+  opacity: 1;
+}

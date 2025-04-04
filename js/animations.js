@@ -1,272 +1,291 @@
-// Project Boxcar Brand Guide Animations
+// Project Boxcar Brand Guide Animations - Modern Edition
 
 // Wait for DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
-  // Initialize GSAP animations
-  initGSAP();
-  
-  // Initialize particle background
-  initParticles();
+  // Initialize GSAP animations if GSAP is available
+  if (typeof gsap !== 'undefined') {
+    initGSAP();
+  }
   
   // Initialize interactive animations
   initInteractiveAnimations();
   
-  // Add animated classes to elements
-  addAnimatedClasses();
+  // Initialize scroll-based animations
+  initScrollAnimations();
 });
 
-// Initialize GSAP animations
+// Initialize GSAP animations with modern approach
 function initGSAP() {
-  // Check if GSAP is loaded
-  if (typeof gsap === 'undefined') {
-    console.error('GSAP is not loaded. Make sure to include the GSAP library.');
-    return;
-  }
-  
   // Register ScrollTrigger plugin if available
   if (gsap.ScrollTrigger) {
     gsap.registerPlugin(ScrollTrigger);
   }
   
-  // Hero section animations
+  // Subtle hero section animations
   animateHero();
   
-  // Animate sections on scroll
+  // Animate sections on scroll with subtle effects
   animateSectionsOnScroll();
   
-  // Animate logo
-  animateLogo();
-  
-  // Animate color palette
-  animateColorPalette();
-  
-  // Animate typography
-  animateTypography();
-  
-  // Animate UI components
+  // Animate UI components with subtle effects
   animateUIComponents();
 }
 
-// Hero section animations
+// Hero section animations - subtle and purposeful
 function animateHero() {
-  // We're removing automatic animations for the hero section
-  // The hero will now only have hover/interaction animations
-}
-
-// Create typing effect - removed as it's an automatic animation
-function createTypingEffect(element) {
-  // Function kept for reference but no longer used
-}
-
-// Animate sections on scroll - disabled to avoid automatic animations
-function animateSectionsOnScroll() {
-  // Removed scroll-triggered animations to avoid movement that might skew assets
-  // This function is kept for reference but no longer adds scroll animations
-}
-
-// Animate logo
-function animateLogo() {
-  // Add animated class to logo previews for hover effects only
-  document.querySelectorAll('.logo-preview').forEach(logo => {
-    logo.classList.add('animated');
+  if (typeof gsap === 'undefined') return;
+  
+  const heroContent = document.querySelector('.hero-content');
+  if (!heroContent) return;
+  
+  // Subtle fade-in and slide-up for hero content
+  gsap.from(heroContent, {
+    duration: 1,
+    y: 30,
+    opacity: 0,
+    ease: "power3.out",
+    delay: 0.2
   });
   
-  // Removed continuous rotation animation for the logo
-}
-
-// Animate color palette
-function animateColorPalette() {
-  // Add animated class to color previews
-  document.querySelectorAll('.color-preview').forEach(preview => {
-    preview.classList.add('animated');
-  });
-  
-  // Animate color values on hover
-  document.querySelectorAll('.color-value').forEach(value => {
-    value.addEventListener('mouseenter', () => {
-      gsap.to(value, {
-        duration: 0.3,
-        scale: 1.1,
-        color: '#00dbdb',
-        ease: "power2.out"
-      });
-    });
-    
-    value.addEventListener('mouseleave', () => {
-      gsap.to(value, {
-        duration: 0.3,
-        scale: 1,
-        color: '',
-        ease: "power2.out"
-      });
-    });
-  });
-}
-
-// Animate typography
-function animateTypography() {
-  // Add animated class to font samples
-  document.querySelectorAll('.font-sample').forEach(sample => {
-    sample.classList.add('animated');
-  });
-  
-  // Animate typography tester
-  const typographySample = document.getElementById('typography-sample-text');
-  if (typographySample) {
-    const fontSelect = document.getElementById('font-select');
-    const weightSelect = document.getElementById('weight-select');
-    const sizeInput = document.getElementById('size-input');
-    
-    [fontSelect, weightSelect, sizeInput].forEach(input => {
-      if (input) {
-        input.addEventListener('change', () => {
-          gsap.from(typographySample, {
-            duration: 0.5,
-            opacity: 0.5,
-            scale: 0.95,
-            ease: "power2.out"
-          });
-        });
-      }
+  // Subtle gradient animation for hero background
+  const hero = document.querySelector('.hero');
+  if (hero) {
+    gsap.to(hero, {
+      backgroundPosition: '100% 50%',
+      duration: 15,
+      ease: "sine.inOut",
+      repeat: -1,
+      yoyo: true
     });
   }
 }
 
-// Animate UI components
-function animateUIComponents() {
-  // Add animated class to buttons
-  document.querySelectorAll('.btn').forEach(btn => {
-    btn.classList.add('animated');
-    btn.classList.add('ripple');
+// Animate sections on scroll with subtle effects
+function animateSectionsOnScroll() {
+  if (typeof gsap === 'undefined' || !gsap.ScrollTrigger) return;
+  
+  // Animate section titles on scroll
+  gsap.utils.toArray('.section-title').forEach(title => {
+    gsap.from(title, {
+      scrollTrigger: {
+        trigger: title,
+        start: "top 80%",
+        toggleActions: "play none none none"
+      },
+      duration: 0.8,
+      y: 20,
+      opacity: 0,
+      ease: "power3.out"
+    });
   });
   
-  // Add animated class to tabs
+  // Animate tab content when it becomes active
   document.querySelectorAll('.tab').forEach(tab => {
-    tab.classList.add('animated');
-  });
-  
-  // Add subtle hover animation to cards instead of flip
-  document.querySelectorAll('.card').forEach(card => {
-    card.classList.add('card-hover');
-  });
-  
-  // Add subtle hover animation to logo items
-  document.querySelectorAll('.logo-preview').forEach(logo => {
-    // Remove the 3D transform effect
-    logo.classList.remove('animated');
-    
-    // Add a subtle shadow and scale effect on hover
-    logo.style.transition = 'all 0.3s ease';
-    
-    logo.addEventListener('mouseenter', () => {
-      gsap.to(logo, {
-        duration: 0.3,
-        scale: 1.03,
-        boxShadow: '0 5px 15px rgba(0, 162, 229, 0.15)',
-        ease: "power2.out"
-      });
-    });
-    
-    logo.addEventListener('mouseleave', () => {
-      gsap.to(logo, {
-        duration: 0.3,
-        scale: 1,
-        boxShadow: '0 0 0 rgba(0, 0, 0, 0)',
-        ease: "power2.out"
+    tab.addEventListener('click', () => {
+      const targetId = tab.getAttribute('data-target');
+      if (!targetId) return;
+      
+      const targetContent = document.getElementById(targetId);
+      if (!targetContent) return;
+      
+      // Get all elements inside the tab content
+      const elements = targetContent.querySelectorAll('.color-item, .logo-item, .component-item, .typography-sample');
+      
+      // Stagger animation for elements
+      gsap.from(elements, {
+        duration: 0.5,
+        y: 20,
+        opacity: 0,
+        stagger: 0.05,
+        ease: "power3.out",
+        delay: 0.2
       });
     });
   });
 }
 
-// Initialize particle background - disabled to avoid continuous animations
-function initParticles() {
-  // Particles disabled to avoid continuous animations that might skew assets
-  // This function is kept for reference but no longer creates particles
-}
-
-// Initialize interactive animations
-function initInteractiveAnimations() {
-  // Add hover animations to elements
-  addHoverAnimations();
+// Animate UI components with subtle effects
+function animateUIComponents() {
+  if (typeof gsap === 'undefined') return;
   
-  // Add click animations
-  addClickAnimations();
-  
-  // Add scroll animations
-  addScrollAnimations();
-}
-
-// Add hover animations
-function addHoverAnimations() {
-  // Add hover-scale to color items
-  document.querySelectorAll('.color-item').forEach(item => {
-    item.classList.add('hover-scale');
-  });
-  
-  // Remove hover-3d from logo items and add subtle hover effect
-  document.querySelectorAll('.logo-item').forEach(item => {
-    // Remove 3D effect class if it exists
-    item.classList.remove('hover-3d');
+  // Add ripple effect to buttons
+  document.querySelectorAll('.btn').forEach(btn => {
+    btn.classList.add('ripple');
     
-    // Add our new subtle hover class defined in CSS
-    // This will add a subtle background color change and shadow
-  });
-  
-  // Add hover-glow to buttons
-  document.querySelectorAll('.btn-primary').forEach(btn => {
-    btn.classList.add('hover-glow');
-  });
-  
-  // Replace hover-bounce with a more subtle effect for component items
-  document.querySelectorAll('.component-item').forEach(item => {
-    item.classList.remove('hover-bounce');
-    item.classList.add('hover-scale');
-    
-    // Reduce the scale amount for a more subtle effect
-    item.addEventListener('mouseenter', () => {
-      gsap.to(item, {
+    // Add hover animation
+    btn.addEventListener('mouseenter', () => {
+      gsap.to(btn, {
         duration: 0.3,
-        scale: 1.03,
         y: -3,
-        boxShadow: '0 3px 10px rgba(0, 0, 0, 0.1)',
+        boxShadow: '0 10px 20px rgba(0, 0, 0, 0.1)',
         ease: "power2.out"
       });
+    });
+    
+    btn.addEventListener('mouseleave', () => {
+      gsap.to(btn, {
+        duration: 0.3,
+        y: 0,
+        boxShadow: '',
+        ease: "power2.out"
+      });
+    });
+  });
+  
+  // Add subtle hover animation to cards
+  document.querySelectorAll('.card').forEach(card => {
+    card.addEventListener('mouseenter', () => {
+      gsap.to(card, {
+        duration: 0.3,
+        y: -5,
+        boxShadow: 'var(--shadow-lg)',
+        ease: "power2.out"
+      });
+    });
+    
+    card.addEventListener('mouseleave', () => {
+      gsap.to(card, {
+        duration: 0.3,
+        y: 0,
+        boxShadow: 'var(--shadow-md)',
+        ease: "power2.out"
+      });
+    });
+  });
+}
+
+// Initialize interactive animations - modern approach
+function initInteractiveAnimations() {
+  // Add hover effects to color items
+  document.querySelectorAll('.color-item').forEach(item => {
+    item.addEventListener('mouseenter', () => {
+      if (typeof gsap !== 'undefined') {
+        gsap.to(item, {
+          duration: 0.3,
+          y: -10,
+          boxShadow: 'var(--shadow-lg)',
+          ease: "power2.out"
+        });
+      } else {
+        // Fallback if GSAP is not available
+        item.style.transform = 'translateY(-10px)';
+        item.style.boxShadow = 'var(--shadow-lg)';
+      }
     });
     
     item.addEventListener('mouseleave', () => {
-      gsap.to(item, {
-        duration: 0.3,
-        scale: 1,
-        y: 0,
-        boxShadow: '0 0 0 rgba(0, 0, 0, 0)',
-        ease: "power2.out"
-      });
+      if (typeof gsap !== 'undefined') {
+        gsap.to(item, {
+          duration: 0.3,
+          y: 0,
+          boxShadow: 'var(--shadow-md)',
+          ease: "power2.out"
+        });
+      } else {
+        // Fallback if GSAP is not available
+        item.style.transform = '';
+        item.style.boxShadow = '';
+      }
+    });
+  });
+  
+  // Add hover effects to component items
+  document.querySelectorAll('.component-item').forEach(item => {
+    item.addEventListener('mouseenter', () => {
+      if (typeof gsap !== 'undefined') {
+        gsap.to(item, {
+          duration: 0.3,
+          y: -5,
+          scale: 1.02,
+          boxShadow: 'var(--shadow-lg)',
+          ease: "power2.out"
+        });
+      } else {
+        // Fallback if GSAP is not available
+        item.style.transform = 'translateY(-5px) scale(1.02)';
+        item.style.boxShadow = 'var(--shadow-lg)';
+      }
+    });
+    
+    item.addEventListener('mouseleave', () => {
+      if (typeof gsap !== 'undefined') {
+        gsap.to(item, {
+          duration: 0.3,
+          y: 0,
+          scale: 1,
+          boxShadow: 'var(--shadow-md)',
+          ease: "power2.out"
+        });
+      } else {
+        // Fallback if GSAP is not available
+        item.style.transform = '';
+        item.style.boxShadow = '';
+      }
+    });
+  });
+  
+  // Add click effects to buttons
+  document.querySelectorAll('.btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      if (typeof gsap !== 'undefined') {
+        gsap.to(btn, {
+          duration: 0.1,
+          scale: 0.95,
+          ease: "power2.out",
+          onComplete: () => {
+            gsap.to(btn, {
+              duration: 0.2,
+              scale: 1,
+              ease: "power2.out"
+            });
+          }
+        });
+      }
     });
   });
 }
 
-// Add click animations
-function addClickAnimations() {
-  // Add click animation to tabs
-  document.querySelectorAll('.tab').forEach(tab => {
-    tab.addEventListener('click', () => {
-      gsap.from(tab, {
-        duration: 0.3,
-        scale: 0.95,
-        ease: "power2.out"
-      });
+// Initialize scroll-based animations
+function initScrollAnimations() {
+  // Animate elements when they come into view
+  const animateOnScroll = (entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        observer.unobserve(entry.target);
+      }
     });
+  };
+  
+  // Create the observer
+  const observer = new IntersectionObserver(animateOnScroll, {
+    root: null,
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
   });
-}
-
-// Add scroll animations
-function addScrollAnimations() {
-  // Removed parallax effect for hero section to avoid continuous animations
-  // No scroll animations are added here anymore
-}
-
-// Add animated classes to elements
-function addAnimatedClasses() {
-  // We're removing automatic animations and keeping only interaction-based ones
-  // No automatic classes are added here anymore
+  
+  // Elements to animate on scroll
+  const elements = document.querySelectorAll('.color-grid, .logo-grid, .component-grid, .typography-sample');
+  
+  // Add fade-in class and observe elements
+  elements.forEach(el => {
+    el.classList.add('fade-in');
+    observer.observe(el);
+  });
+  
+  // Add CSS for fade-in animation
+  const style = document.createElement('style');
+  style.textContent = `
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    
+    .fade-in.in-view {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  `;
+  document.head.appendChild(style);
 }

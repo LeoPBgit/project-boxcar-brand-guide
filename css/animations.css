@@ -1,6 +1,6 @@
-/* Project Boxcar Brand Guide Animations */
+/* Project Boxcar Brand Guide Animations - Modern Edition */
 
-/* Animation Keyframes */
+/* Animation Keyframes - Refined for modern design */
 @keyframes gradient-flow {
   0% {
     background-position: 0% 50%;
@@ -18,7 +18,7 @@
     transform: translateY(0px);
   }
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-8px);
   }
   100% {
     transform: translateY(0px);
@@ -28,21 +28,15 @@
 @keyframes pulse {
   0% {
     transform: scale(1);
+    box-shadow: var(--shadow-md);
   }
   50% {
-    transform: scale(1.05);
+    transform: scale(1.03);
+    box-shadow: var(--shadow-lg);
   }
   100% {
     transform: scale(1);
-  }
-}
-
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+    box-shadow: var(--shadow-md);
   }
 }
 
@@ -55,27 +49,61 @@
   }
 }
 
-/* Animated Elements - Continuous animations removed */
-/* These classes are kept for reference but are no longer used */
-.animate-gradient {
-  background: linear-gradient(270deg, var(--primary-teal), var(--primary-blue), var(--secondary-dark-gray));
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Hero Section Animation */
+.hero {
   background-size: 200% 200%;
-  /* Animation removed to avoid continuous movement */
+  animation: gradient-flow 15s ease infinite;
+}
+
+/* Animated Elements - Modern Approach */
+.animate-gradient {
+  background: linear-gradient(135deg, var(--primary-teal), var(--primary-blue), var(--secondary-dark-gray));
+  background-size: 200% 200%;
+  animation: gradient-flow 15s ease infinite;
 }
 
 .animate-float {
-  /* Animation removed to avoid continuous movement */
+  animation: float 6s ease-in-out infinite;
 }
 
 .animate-pulse {
-  /* Animation removed to avoid continuous movement */
-}
-
-.animate-rotate {
-  /* Animation removed to avoid continuous movement */
+  animation: pulse 3s ease-in-out infinite;
 }
 
 .animate-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.animate-shimmer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background: linear-gradient(
     90deg,
     rgba(255, 255, 255, 0) 0%,
@@ -83,81 +111,79 @@
     rgba(255, 255, 255, 0) 100%
   );
   background-size: 200% 100%;
-  /* Animation removed to avoid continuous movement */
+  animation: shimmer 2s infinite;
+  pointer-events: none;
 }
 
-/* GSAP Animation Classes */
+/* GSAP Animation Classes - Modern Approach */
 .gsap-reveal {
   opacity: 0;
 }
 
 .gsap-slide-up {
   opacity: 0;
-  transform: translateY(50px);
+  transform: translateY(30px);
 }
 
 .gsap-slide-down {
   opacity: 0;
-  transform: translateY(-50px);
+  transform: translateY(-30px);
 }
 
 .gsap-slide-left {
   opacity: 0;
-  transform: translateX(50px);
+  transform: translateX(30px);
 }
 
 .gsap-slide-right {
   opacity: 0;
-  transform: translateX(-50px);
+  transform: translateX(-30px);
 }
 
 .gsap-scale {
   opacity: 0;
-  transform: scale(0.8);
+  transform: scale(0.95);
 }
 
-.gsap-flip {
-  opacity: 0;
-  transform: rotateY(90deg);
+/* Fade-in animation for sections */
+.fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
 }
 
-/* Interactive Animation Classes */
+/* Slide-in animation for elements */
+.slide-in-right {
+  animation: slideInRight 0.6s ease-out forwards;
+}
+
+/* Interactive Animation Classes - Modern Approach */
 .hover-scale {
-  transition: transform 0.3s ease;
+  transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1), 
+              box-shadow 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .hover-scale:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
+  box-shadow: var(--shadow-md);
 }
 
-.hover-rotate {
-  transition: transform 0.5s ease;
+.hover-lift {
+  transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1), 
+              box-shadow 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-.hover-rotate:hover {
-  transform: rotate(5deg);
-}
-
-.hover-3d {
-  transition: transform 0.5s ease;
-  transform-style: preserve-3d;
-}
-
-.hover-3d:hover {
-  transform: perspective(1000px) rotateY(15deg) rotateX(5deg);
+.hover-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
 }
 
 .hover-glow {
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  transition: box-shadow 0.3s cubic-bezier(0.165, 0.84, 0.44, 1), 
+              transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .hover-glow:hover {
-  box-shadow: 0 0 15px var(--primary-teal);
-  transform: translateY(-5px);
-}
-
-.hover-bounce:hover {
-  animation: bounce 0.5s ease;
+  box-shadow: 0 0 20px rgba(0, 219, 219, 0.4);
+  transform: translateY(-3px);
 }
 
 @keyframes bounce {
@@ -165,17 +191,23 @@
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-6px);
   }
 }
 
-/* Button Animations */
-.btn.animated {
-  position: relative;
-  overflow: hidden;
+.hover-bounce:hover {
+  animation: bounce 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-.btn.animated::after {
+/* Button Animations - Modern Approach */
+.btn {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1), 
+              box-shadow 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.btn::after {
   content: '';
   position: absolute;
   top: 0;
@@ -184,14 +216,28 @@
   height: 100%;
   background: rgba(255, 255, 255, 0.2);
   transform: translateX(-100%);
-  transition: transform 0.3s ease;
+  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-.btn.animated:hover::after {
+.btn:hover::after {
   transform: translateX(100%);
 }
 
-/* Ripple Effect */
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn:active {
+  transform: translateY(1px);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-primary:hover {
+  box-shadow: var(--shadow-primary);
+}
+
+/* Ripple Effect - Enhanced */
 .ripple {
   position: relative;
   overflow: hidden;
@@ -206,12 +252,13 @@
   top: 0;
   left: 0;
   pointer-events: none;
-  background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.7) 10%, transparent 10.01%);
   background-repeat: no-repeat;
   background-position: 50%;
   transform: scale(10, 10);
   opacity: 0;
-  transition: transform 0.5s, opacity 1s;
+  transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), 
+              opacity 1s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .ripple:active::after {
@@ -220,23 +267,36 @@
   transition: 0s;
 }
 
-/* Logo Animations - Replaced 3D effect with subtle hover */
+/* Logo Animations - Modern Approach */
 .logo-preview {
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .logo-preview:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 12px rgba(0, 162, 229, 0.12);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 162, 229, 0.15);
 }
 
-/* Color Palette Animations */
-.color-preview.animated {
+.logo-item {
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.logo-item:hover {
+  transform: translateY(-10px);
+}
+
+.logo-item::after {
+  transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/* Color Palette Animations - Modern Approach */
+.color-preview {
   position: relative;
   overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-.color-preview.animated::before {
+.color-preview::before {
   content: '';
   position: absolute;
   top: -50%;
@@ -244,67 +304,137 @@
   width: 200%;
   height: 200%;
   background: linear-gradient(
-    to bottom right,
+    135deg,
     rgba(255, 255, 255, 0) 0%,
     rgba(255, 255, 255, 0.1) 50%,
     rgba(255, 255, 255, 0) 100%
   );
   transform: rotate(45deg);
-  /* Animation removed to avoid continuous movement */
+  transition: opacity 0.3s ease;
+  opacity: 0;
 }
 
-/* Add hover-only shimmer effect */
-.color-preview.animated:hover::before {
+.color-preview:hover::before {
   animation: shimmer 1.5s;
+  opacity: 1;
 }
 
-/* Typography Animations */
-.font-sample.animated {
-  transition: all 0.5s ease;
+.color-item {
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-.font-sample.animated:hover {
-  letter-spacing: 2px;
-  color: var(--primary-teal);
+.color-item:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-lg);
 }
 
-/* Hero Section Animation - Continuous animation removed */
-.hero.animated {
+.color-value {
+  transition: all 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+  cursor: pointer;
+}
+
+.color-value:hover {
+  transform: translateY(-2px);
+  background-color: rgba(0, 0, 0, 0.06);
+}
+
+/* Typography Animations - Modern Approach */
+.font-sample {
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  padding: var(--spacing-sm) 0;
+}
+
+.font-sample:hover {
+  transform: translateX(10px);
+  border-bottom-color: var(--primary-teal);
+  color: var(--primary-blue);
+}
+
+.typography-sample {
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.typography-sample:hover {
+  box-shadow: var(--shadow-md);
+}
+
+/* Hero Section Animation - Modern Approach */
+.hero {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(270deg, var(--primary-teal), var(--primary-blue), var(--secondary-dark-gray));
-  /* Static gradient background instead of animated one */
 }
 
-.hero.animated::before {
+.hero::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle at center, rgba(0, 219, 219, 0.2) 0%, rgba(0, 162, 229, 0.2) 50%, transparent 70%);
-  /* Animation removed to avoid continuous movement */
+  background: radial-gradient(circle at 70% 30%, rgba(0, 219, 219, 0.15) 0%, transparent 70%);
+  z-index: 1;
 }
 
-/* Particle Background - Disabled */
-.particles-bg {
-  /* Hidden to avoid continuous animations */
-  display: none;
+.hero-content {
+  position: relative;
+  z-index: 2;
+  animation: fadeIn 1s ease-out;
 }
 
-.particle {
-  /* Animation removed to avoid continuous movement */
-  display: none;
+.hero-title {
+  position: relative;
 }
 
-/* Tab Animation */
-.tab.animated {
+.hero-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100px;
+  height: 4px;
+  background: var(--gradient-primary);
+  border-radius: var(--border-radius-full);
+  animation: slideInRight 0.8s ease-out 0.5s forwards;
+  transform-origin: left;
+  transform: scaleX(0);
+  opacity: 0;
+}
+
+/* Component Animations - Modern Approach */
+.component-item {
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.component-item:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: var(--shadow-lg);
+}
+
+.component-title::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background: var(--gradient-primary);
+  border-radius: var(--border-radius-full);
+  transition: width 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.component-item:hover .component-title::after {
+  width: 50px;
+}
+
+/* Tab Animation - Modern Approach */
+.tab {
   position: relative;
   overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-.tab.animated::after {
+.tab::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -312,42 +442,74 @@
   width: 0;
   height: 2px;
   background: var(--primary-blue);
-  transition: width 0.3s ease;
+  transition: width 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-.tab.animated:hover::after {
+.tab:hover::after {
   width: 100%;
 }
 
-/* Card Subtle Hover Animation - Replacing flip animation */
-.card-hover {
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+.tab-content {
+  animation: fadeIn 0.5s ease-out;
 }
 
-.card-hover:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+/* Card Animation - Modern Approach */
+.card {
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-/* Logo Item Hover Animation - More subtle than 3D transform */
-.logo-item {
-  transition: all 0.3s ease;
-  border-radius: 4px;
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
 }
 
-.logo-item:hover {
-  background-color: rgba(0, 219, 219, 0.05);
-  box-shadow: 0 3px 10px rgba(0, 162, 229, 0.1);
+.card-img {
+  transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  overflow: hidden;
+}
+
+.card:hover .card-img {
+  transform: scale(1.03);
+}
+
+/* Form Element Animations - Modern Approach */
+.form-input {
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.form-input:focus {
   transform: translateY(-2px);
+  box-shadow: 0 0 0 3px rgba(0, 162, 229, 0.1);
 }
 
-/* Brand asset hover effect - Very subtle to maintain integrity */
-.brand-asset {
-  transition: all 0.3s ease;
+/* Copy Button Animation */
+.copy-btn {
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-.brand-asset:hover {
-  filter: brightness(1.03);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+.copy-btn:hover {
+  background-color: var(--primary-blue);
+  color: var(--primary-white);
+}
+
+/* Mobile Menu Animation */
+.menu-toggle {
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.menu-toggle span {
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/* Footer Animation */
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--gradient-primary);
+  animation: gradient-flow 15s ease infinite;
+  background-size: 200% 200%;
 }

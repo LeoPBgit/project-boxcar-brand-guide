@@ -29,6 +29,7 @@ This section tracks completed and functional components of the project.
   - Typography tester
   - Background toggles for logos
   - Mobile-responsive design
+  - SVG download and copy functionality
 - CSS-based placeholders for brand application examples
 
 ### Validated Components
