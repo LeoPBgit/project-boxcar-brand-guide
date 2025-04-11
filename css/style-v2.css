@@ -1118,8 +1118,7 @@ h3 + p, h4 + p {
 }
 
 .tab-content {
-  margin-bottom: var(--spacing-lg);
-  padding: var(--spacing-md) 0;
+  margin-bottom: var(--spacing-xl);
 }
 
 .tab-content h3 {
@@ -1130,38 +1129,4 @@ h3 + p, h4 + p {
 .tab-content h4 {
   margin-top: var(--spacing-md);
   margin-bottom: var(--spacing-sm);
-}
-
-/* Specific spacing for logo tab content */
-#logo-clearspace .row,
-#logo-usage .row {
-  gap: var(--spacing-lg);
-  margin-bottom: var(--spacing-lg);
-}
-
-#logo-clearspace h3,
-#logo-usage h3 {
-  margin-bottom: var(--spacing-md);
-}
-
-#logo-clearspace .placeholder,
-#logo-usage .placeholder {
-  padding: var(--spacing-md);
-  margin-top: var(--spacing-sm);
-}
-
-#logo-clearspace ul,
-#logo-usage ul {
-  padding-left: var(--spacing-md);
-  margin-top: var(--spacing-sm);
-}
-
-#logo-clearspace li,
-#logo-usage li {
-  margin-bottom: var(--spacing-xs);
-}
-
-/* Logo downloads section specific spacing */
-#logo-usage h3 + p {
-  margin-bottom: var(--spacing-md);
 }

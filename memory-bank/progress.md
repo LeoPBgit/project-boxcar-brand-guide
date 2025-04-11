@@ -31,6 +31,7 @@ This section tracks completed and functional components of the project.
   - Mobile-responsive design
   - SVG download and copy functionality
 - CSS-based placeholders for brand application examples
+- Improved spacing and visual hierarchy in the Logo System section
 
 ### Validated Components
 - HTML structure and semantic markup
@@ -73,6 +74,7 @@ This section tracks known issues, bugs, and limitations in the current implement
 - Some interactive elements may not work correctly on older browsers (IE11)
 - Mobile menu toggle animation sometimes stutters on low-end devices
 - Color contrast checker may give incorrect results for certain color combinations with transparency
+- "Failed to load resource: net::ERR_FILE_NOT_FOUND" error appears when loading the website
 
 ### Limitations
 - No search functionality for finding specific guidelines quickly
