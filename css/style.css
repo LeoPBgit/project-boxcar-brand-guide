@@ -165,9 +165,9 @@ img {
 /* Layout - Modern Asymmetrical Approach */
 .container {
   width: 100%;
-  max-width: 1400px;
+  max-width: 100%; /* Changed from 1400px to 100% to fill the entire width */
   margin: 0 auto;
-  padding: 0 var(--spacing-lg);
+  padding: 0 var(--spacing-sm); /* Reduced padding to allow more content width */
 }
 
 .section {
@@ -203,8 +203,9 @@ img {
 .row {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  gap: var(--spacing-lg);
+  gap: var(--spacing-md); /* Reduced gap for more content space */
   margin-bottom: var(--spacing-lg);
+  width: 100%; /* Ensure rows take full width */
 }
 
 .col {
@@ -310,7 +311,7 @@ img {
 .hero-content {
   position: relative;
   z-index: 2;
-  max-width: 800px;
+  max-width: 100%; /* Changed from 800px to 100% to fill entire width */
   margin-left: 0;
 }
 
@@ -339,15 +340,16 @@ img {
   margin-bottom: var(--spacing-xl);
   opacity: 0.9;
   font-weight: 300;
-  max-width: 600px;
+  max-width: 100%; /* Changed from 600px to fill width */
 }
 
 /* Color Palette - Modern Approach */
 .color-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: var(--spacing-xl);
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); /* Smaller minimum width for more columns */
+  gap: var(--spacing-md); /* Reduced gap for more content */
   margin-bottom: var(--spacing-xxl);
+  width: 100%; /* Ensure grid takes full width */
 }
 
 .color-item {
@@ -418,10 +420,11 @@ img {
 /* Typography - Modern Approach */
 .typography-sample {
   margin-bottom: var(--spacing-xl);
-  padding: var(--spacing-lg);
+  padding: var(--spacing-md); /* Reduced padding */
   background-color: var(--primary-white);
   border-radius: var(--border-radius-lg);
   box-shadow: var(--shadow-sm);
+  width: 100%; /* Ensure full width */
 }
 
 .font-family {
@@ -449,25 +452,27 @@ img {
 }
 
 #typography-sample-text {
-  padding: var(--spacing-lg);
+  padding: var(--spacing-md); /* Reduced padding */
   background-color: rgba(0, 0, 0, 0.02);
   border-radius: var(--border-radius-md);
   margin-bottom: var(--spacing-md);
   transition: all var(--transition-medium);
+  width: 100%; /* Ensure full width */
 }
 
 /* Logo Section - Modern Approach */
 .logo-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  gap: var(--spacing-xl);
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Smaller minimum width for more columns */
+  gap: var(--spacing-md); /* Reduced gap between items */
   margin-bottom: var(--spacing-xl);
+  width: 100%; /* Ensure grid takes full width */
 }
 
 .logo-item {
   background-color: var(--primary-white);
   border-radius: var(--border-radius-lg);
-  padding: var(--spacing-xl);
+  padding: var(--spacing-md); /* Reduced padding to allow more content */
   text-align: center;
   box-shadow: var(--shadow-md);
   transition: all var(--transition-medium);

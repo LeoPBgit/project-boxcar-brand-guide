@@ -284,8 +284,30 @@ function initActiveNavigation() {
   const sections = document.querySelectorAll('section[id]');
   const navItems = document.querySelectorAll('.nav-item');
   
+  // Set initial active state for UX Styling page
+  if (window.location.pathname.includes('ux-styling.html')) {
+    navItems.forEach(item => {
+      if (item.getAttribute('href') === 'ux-styling.html') {
+        item.classList.add('active');
+      }
+    });
+  }
+  
   function highlightNavItem() {
     const scrollPosition = window.scrollY + 100; // Offset for header
+    
+    // Don't run section highlighting on UX Styling page
+    if (window.location.pathname.includes('ux-styling.html')) {
+      return;
+    }
+    
+    // First remove active class from all items
+    navItems.forEach(item => {
+      item.classList.remove('active');
+    });
+    
+    // Find the current section and highlight its nav item
+    let currentSection = null;
     
     sections.forEach(section => {
       const sectionTop = section.offsetTop;
@@ -293,18 +315,36 @@ function initActiveNavigation() {
       const sectionId = section.getAttribute('id');
       
       if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-        navItems.forEach(item => {
-          item.classList.remove('active');
-          if (item.getAttribute('href') === `#${sectionId}`) {
-            item.classList.add('active');
-          }
-        });
+        currentSection = sectionId;
       }
     });
+    
+    // If we found a current section, highlight its nav item
+    if (currentSection) {
+      navItems.forEach(item => {
+        if (item.getAttribute('href') === `#${currentSection}`) {
+          item.classList.add('active');
+        }
+      });
+    } else {
+      // If no section is active (e.g., at the top of the page), highlight the first nav item
+      const firstNavItem = navItems[0];
+      if (firstNavItem) {
+        firstNavItem.classList.add('active');
+      }
+    }
   }
   
   window.addEventListener('scroll', highlightNavItem);
   highlightNavItem(); // Run on load
+  
+  // Also add click handler to immediately set active class
+  navItems.forEach(item => {
+    item.addEventListener('click', function() {
+      navItems.forEach(i => i.classList.remove('active'));
+      this.classList.add('active');
+    });
+  });
 }
 
 // Smooth scrolling for anchor links
