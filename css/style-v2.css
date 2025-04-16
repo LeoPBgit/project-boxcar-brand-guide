@@ -33,13 +33,14 @@
   --text-3xl: 3.052rem;
   --text-4xl: 3.815rem;
   
-  /* Spacing */
-  --spacing-xs: 0.5rem;
-  --spacing-sm: 1rem;
-  --spacing-md: 1.5rem;
-  --spacing-lg: 2.5rem;
-  --spacing-xl: 4rem;
-  --spacing-xxl: 6rem;
+  /* Spacing - Mercedes-Benz inspired */
+  --spacing-xs: 0.625rem;  /* 10px */
+  --spacing-sm: 1.25rem;   /* 20px */
+  --spacing-md: 2rem;      /* 32px */
+  --spacing-lg: 3rem;      /* 48px */
+  --spacing-xl: 5rem;      /* 80px */
+  --spacing-xxl: 7.5rem;   /* 120px */
+  --content-margin: 18%;   /* Side margins for content - increased from 12% to 18% */
   
   /* Border Radius */
   --border-radius-sm: 6px;
@@ -57,6 +58,9 @@
   --transition-fast: 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
   --transition-medium: 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
   --transition-slow: 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  
+  /* Page Structure */
+  --page-padding: 0 var(--content-margin);
 }
 
 /* Reset & Base Styles - Modern Approach */
@@ -162,18 +166,18 @@ img {
   display: block;
 }
 
-/* Layout - Modern Asymmetrical Approach */
+/* Layout - Mercedes-Benz Inspired Approach */
 .container {
-  width: 100%;
-  max-width: 1400px;
+  width: 76%; /* Reduced width from 86% to 76% to provide more space on edges */
+  max-width: 1440px; /* Mercedes-Benz uses contained content within full-width sections */
   margin: 0 auto;
-  padding: 0 var(--spacing-lg);
+  padding: 0 var(--spacing-xl); /* Increased horizontal padding from lg to xl */
 }
 
 .section {
-  padding: calc(var(--spacing-xl) * 1.5) 0;
+  padding: var(--spacing-xxl) var(--content-margin);
   position: relative;
-  margin-bottom: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
 }
 
 .section:nth-child(odd) {
@@ -185,8 +189,10 @@ img {
   margin-bottom: var(--spacing-xl);
   position: relative;
   display: inline-block;
-  font-weight: 400;
+  font-weight: 300; /* Lighter weight for premium feel */
   color: var(--primary-black);
+  letter-spacing: -0.03em; /* Slightly increased letter spacing for luxury feel */
+  padding-right: var(--spacing-xl); /* Add space to the right */
 }
 
 .section-title::after {
@@ -203,12 +209,14 @@ img {
 .row {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  gap: var(--spacing-lg);
-  margin-bottom: var(--spacing-lg);
+  gap: var(--spacing-lg); /* Increased gap from md to lg for more breathing room */
+  margin-bottom: var(--spacing-xl);
+  width: 100%; /* Ensure rows take full width */
 }
 
 .col {
   grid-column: span 6;
+  padding: var(--spacing-sm); /* Added padding inside columns */
 }
 
 .col-full {
@@ -225,75 +233,131 @@ img {
 
 /* Header - Modern Approach */
 .header {
-  background-color: rgba(26, 26, 26, 0.95);
+  background-color: rgba(26, 26, 26, 0.85);
   color: var(--primary-white);
-  padding: var(--spacing-md) 0;
+  padding: var(--spacing-xs) 0; /* Consistent padding */
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 100;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.08);
   transition: all var(--transition-medium);
+  height: 60px; /* Fixed height */
+  display: flex;
+  align-items: center;
 }
 
 .header.scrolled {
-  padding: var(--spacing-xs) 0;
-  background-color: rgba(26, 26, 26, 0.98);
+  background-color: rgba(26, 26, 26, 0.95); /* More opaque when scrolled */
+  height: 50px; /* Slightly smaller when scrolled */
 }
 
 .header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+  max-width: 1400px; /* Wider container */
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg); /* Consistent padding */
 }
 
 .logo {
-  height: 40px;
+  height: 28px; /* Smaller logo */
   transition: all var(--transition-medium);
+  flex-shrink: 0; /* Prevent logo from shrinking */
 }
 
 .header.scrolled .logo {
-  height: 32px;
+  height: 24px; /* Even smaller when scrolled */
 }
 
 .nav {
   display: flex;
-  gap: var(--spacing-md);
+  align-items: center;
+  gap: var(--spacing-sm); /* Smaller gap between items */
+  margin-left: auto; /* Push to the right */
+  white-space: nowrap; /* Prevent wrapping */
+  overflow-x: auto; /* Allow horizontal scrolling if needed */
+  -ms-overflow-style: none; /* Hide scrollbar in IE/Edge */
+  scrollbar-width: none; /* Hide scrollbar in Firefox */
+}
+
+.nav::-webkit-scrollbar {
+  display: none; /* Hide scrollbar in Chrome/Safari */
 }
 
 .nav-item {
   color: var(--primary-white);
-  font-weight: 500;
-  padding: 0.4rem 0.8rem;
+  font-weight: 400;
+  font-size: 0.85rem; /* Smaller font size */
+  padding: 0.3rem 0.6rem; /* Smaller padding */
   border-radius: var(--border-radius-full);
   transition: all var(--transition-medium);
   position: relative;
-  opacity: 0.8;
+  opacity: 0.75;
+  letter-spacing: 0.01em; /* Reduced letter spacing */
+  text-transform: uppercase; /* Optional: uppercase for more compact look */
 }
 
 .nav-item:hover {
   color: var(--primary-white);
-  background-color: rgba(255, 255, 255, 0.1);
-  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.08);
+  opacity: 0.9;
 }
 
 .nav-item.active {
   color: var(--primary-white);
-  background-color: rgba(0, 219, 219, 0.2);
+  background-color: rgba(0, 219, 219, 0.15);
   opacity: 1;
+  position: relative;
+  font-weight: 500;
+}
+
+.nav-item.active::before {
+  content: '';
+  position: absolute;
+  top: -8px; /* Closer to the nav item */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px; /* Smaller circle */
+  height: 6px; /* Smaller circle */
+  background-color: var(--primary-teal);
+  border-radius: 50%;
+  z-index: 101;
+  box-shadow: 0 0 4px rgba(0, 219, 219, 0.6);
+  animation: pulse 2.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: translateX(-50%) scale(1);
+    opacity: 0.7;
+    box-shadow: 0 0 4px rgba(0, 219, 219, 0.5);
+  }
+  50% {
+    transform: translateX(-50%) scale(1.1); /* Less dramatic scale */
+    opacity: 0.9;
+    box-shadow: 0 0 6px rgba(0, 219, 219, 0.7);
+  }
+  100% {
+    transform: translateX(-50%) scale(1);
+    opacity: 0.7;
+    box-shadow: 0 0 4px rgba(0, 219, 219, 0.5);
+  }
 }
 
 /* Hero Section - Modern Approach */
 .hero {
   background: var(--gradient-dark);
   color: var(--primary-white);
-  padding: calc(var(--spacing-xxl) * 1.5) 0 var(--spacing-xxl);
+  padding: calc(var(--spacing-xxl) * 1.5) var(--content-margin) var(--spacing-xxl);
   position: relative;
   overflow: hidden;
-  margin-top: 70px; /* Account for fixed header */
+  margin-top: 60px; /* Match header height */
 }
 
 .hero::before {
@@ -310,8 +374,8 @@ img {
 .hero-content {
   position: relative;
   z-index: 2;
-  max-width: 800px;
-  margin-left: 0;
+  max-width: 100%; /* Changed from 800px to 100% to fill entire width */
+  margin-left: var(--content-margin); /* Added left margin to match brand style */
 }
 
 .hero-title {
@@ -339,15 +403,17 @@ img {
   margin-bottom: var(--spacing-xl);
   opacity: 0.9;
   font-weight: 300;
-  max-width: 600px;
+  max-width: 80%; /* Changed from 100% to 80% for better readability */
+  line-height: 1.4;
 }
 
-/* Color Palette - Modern Approach */
+/* Color Palette - Mercedes-Benz Inspired */
 .color-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: var(--spacing-xl);
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Increased from 260px to 280px */
+  gap: var(--spacing-lg); /* Increased spacing between items from md to lg */
   margin-bottom: var(--spacing-xxl);
+  width: 100%; /* Ensure grid takes full width */
 }
 
 .color-item {
@@ -365,15 +431,16 @@ img {
 }
 
 .color-preview {
-  height: 180px;
+  height: 200px; /* Taller for more impact */
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--primary-white);
-  font-weight: bold;
+  font-weight: 600; /* Slightly lighter than bold */
   font-size: var(--text-lg);
   position: relative;
   overflow: hidden;
+  border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0; /* Rounded top corners only */
 }
 
 .color-preview::after {
@@ -388,7 +455,7 @@ img {
 }
 
 .color-info {
-  padding: var(--spacing-md);
+  padding: var(--spacing-lg) var(--spacing-lg) var(--spacing-lg);
   background-color: var(--primary-white);
 }
 
@@ -418,14 +485,16 @@ img {
 /* Typography - Modern Approach */
 .typography-sample {
   margin-bottom: var(--spacing-xl);
-  padding: var(--spacing-lg);
+  padding: var(--spacing-lg); /* Increased padding from md to lg */
   background-color: var(--primary-white);
   border-radius: var(--border-radius-lg);
   box-shadow: var(--shadow-sm);
+  width: 100%; /* Ensure full width */
 }
 
 .font-family {
-  margin-bottom: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+  padding: 0 var(--spacing-md);
   position: relative;
 }
 
@@ -438,7 +507,7 @@ img {
 
 .font-sample {
   margin-bottom: var(--spacing-md);
-  padding: var(--spacing-sm) 0;
+  padding: var(--spacing-md) var(--spacing-sm);
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   transition: all var(--transition-medium);
 }
@@ -449,25 +518,27 @@ img {
 }
 
 #typography-sample-text {
-  padding: var(--spacing-lg);
+  padding: var(--spacing-md); /* Reduced padding */
   background-color: rgba(0, 0, 0, 0.02);
   border-radius: var(--border-radius-md);
   margin-bottom: var(--spacing-md);
   transition: all var(--transition-medium);
+  width: 100%; /* Ensure full width */
 }
 
-/* Logo Section - Modern Approach */
+/* Logo Section - Mercedes-Benz Inspired */
 .logo-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  gap: var(--spacing-xl);
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); /* Increased from 320px to 340px */
+  gap: var(--spacing-lg); /* Increased from md to lg for better spacing */
   margin-bottom: var(--spacing-xl);
+  width: 100%; /* Ensure grid takes full width */
 }
 
 .logo-item {
   background-color: var(--primary-white);
   border-radius: var(--border-radius-lg);
-  padding: var(--spacing-xl);
+  padding: var(--spacing-xl); /* Increased padding from lg to xl for more space */
   text-align: center;
   box-shadow: var(--shadow-md);
   transition: all var(--transition-medium);
@@ -518,6 +589,7 @@ img {
 .logo-preview img {
   max-height: 100px;
   width: auto;
+  max-width: 80%;
 }
 
 .logo-info {
@@ -627,20 +699,22 @@ img {
 /* UI Components - Modern Approach */
 .component-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: var(--spacing-xl);
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); /* Larger for premium feel */
+  gap: var(--spacing-lg); /* Increased gap for luxury spacing */
   margin-bottom: var(--spacing-xl);
+  width: 100%; /* Ensure grid takes full width */
 }
 
 .component-item {
   border: none;
   border-radius: var(--border-radius-lg);
-  padding: var(--spacing-xl);
+  padding: var(--spacing-xl) var(--spacing-lg);
   background-color: var(--primary-white);
   box-shadow: var(--shadow-md);
   transition: all var(--transition-medium);
   position: relative;
   overflow: hidden;
+  min-height: 300px; /* Consistent height for grid items */
 }
 
 .component-item:hover {
@@ -848,7 +922,7 @@ select.form-input {
 }
 
 /* Responsive - Modern Approach */
-@media (max-width: 1200px) {
+@media (max-width: 1400px) {
   .hero-title {
     font-size: var(--text-3xl);
   }
@@ -859,6 +933,37 @@ select.form-input {
   
   .section-title {
     font-size: var(--text-2xl);
+  }
+  
+  .container {
+    width: 90%;
+    padding: 0 var(--spacing-md);
+  }
+}
+
+@media (min-width: 1800px) {
+  /* Adjustments for very large screens to maintain balance */
+  .container {
+    max-width: 1680px; /* Premium but not too wide */
+  }
+  
+  .color-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+  
+  .logo-grid, .component-grid {
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+    width: 90%;
+    padding: 0 var(--spacing-md);
+  }
+  
+  .section {
+    padding: var(--spacing-xl) 0;
   }
 }
 
@@ -872,11 +977,31 @@ select.form-input {
   }
   
   .logo-grid {
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+  
+  .component-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+  
+  .color-grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   }
 }
 
 @media (max-width: 768px) {
+  .header {
+    height: 50px; /* Smaller header on mobile */
+  }
+  
+  .header.scrolled {
+    height: 45px; /* Even smaller when scrolled */
+  }
+  
+  .header-container {
+    padding: 0 var(--spacing-sm); /* Smaller padding on mobile */
+  }
+  
   .nav {
     position: fixed;
     top: 0;
@@ -890,6 +1015,7 @@ select.form-input {
     transition: right 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     box-shadow: -5px 0 30px rgba(0, 0, 0, 0.3);
     z-index: 99;
+    align-items: flex-start;
   }
   
   .nav.active {
@@ -898,12 +1024,17 @@ select.form-input {
   
   .nav-item {
     margin: 0 0 1.5rem 0;
-    font-size: var(--text-md);
+    font-size: 0.9rem;
+    text-transform: none; /* Remove uppercase on mobile */
   }
   
   .menu-toggle {
     display: block;
     z-index: 100;
+  }
+  
+  .hero {
+    margin-top: 50px; /* Match mobile header height */
   }
   
   .hero-title {
@@ -917,11 +1048,12 @@ select.form-input {
   }
   
   .section {
-    padding: var(--spacing-xl) 0;
+    padding: var(--spacing-lg) 0;
   }
   
-  .component-grid, .color-grid {
-    grid-template-columns: 1fr;
+  .component-grid, .color-grid, .logo-grid {
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+    gap: var(--spacing-md);
   }
   
   h1 {
@@ -963,11 +1095,12 @@ select.form-input {
   }
   
   .container {
-    padding: 0 var(--spacing-md);
+    width: 94%;
+    padding: 0 var(--spacing-sm);
   }
   
   .hero {
-    padding: var(--spacing-xl) 0;
+    padding: var(--spacing-lg) var(--spacing-md);
   }
   
   .tabs {
@@ -979,7 +1112,8 @@ select.form-input {
     flex: 1 1 calc(50% - var(--spacing-xs));
     text-align: center;
     font-size: var(--text-xs);
-    padding: var(--spacing-xs) var(--spacing-sm);
+    padding: var(--spacing-sm) var(--spacing-md); /* Increased padding */
+    margin: 0; /* Remove margin on mobile */
   }
 }
 
@@ -1056,12 +1190,12 @@ select.form-input {
 /* Tabs - Modern Approach */
 .tabs {
   display: flex;
-  gap: var(--spacing-sm);
+  gap: var(--spacing-lg); /* Increased from sm to lg */
   margin-bottom: var(--spacing-xl);
   border-bottom: none;
   flex-wrap: nowrap;
   overflow-x: auto;
-  padding-bottom: var(--spacing-sm);
+  padding: 0 var(--spacing-md) var(--spacing-md); /* Added horizontal padding */
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
@@ -1071,13 +1205,14 @@ select.form-input {
 }
 
 .tab {
-  padding: 0.5rem 1rem;
+  padding: 0.75rem 1.5rem; /* Increased padding */
   cursor: pointer;
   border-radius: var(--border-radius-full);
   font-weight: 500;
   color: var(--secondary-dark-gray);
   transition: all var(--transition-medium);
   position: relative;
+  margin: 0 var(--spacing-xs); /* Added horizontal margin */
 }
 
 .tab:hover {
@@ -1111,14 +1246,14 @@ select.form-input {
 .mb-xs {
   margin-bottom: var(--spacing-xs);
 }
-
 /* Improved spacing for nested content */
 h3 + p, h4 + p {
   margin-top: calc(var(--spacing-xs) * -0.5);
 }
-
 .tab-content {
   margin-bottom: var(--spacing-xl);
+  width: 100%; /* Ensure tab content fills width */
+  padding: 0 var(--spacing-lg); /* Added horizontal padding */
 }
 
 .tab-content h3 {
@@ -1129,4 +1264,16 @@ h3 + p, h4 + p {
 .tab-content h4 {
   margin-top: var(--spacing-md);
   margin-bottom: var(--spacing-sm);
+}
+
+/* Additional utility classes for width control */
+.w-100 {
+  width: 100%;
+}
+
+.w-auto {
+  width: auto;
+}
+.max-w-full {
+  max-width: 100%;
 }

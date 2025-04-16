@@ -1,0 +1,1427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Boxcar UX Styling Guide</title>
+    <link rel="stylesheet" href="css/style-v2.css?v=20250416">
+    <link rel="stylesheet" href="css/placeholders.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/download-icons.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- GSAP Animation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo-link">
+                <img src="assets/images/white-logo.svg" alt="Project Boxcar Logo" class="logo">
+            </a>
+            <nav class="nav">
+                <a href="index.html" class="nav-item">Brand Guide</a>
+                <a href="#design-principles" class="nav-item">Design Principles</a>
+                <a href="#layout" class="nav-item">Layout</a>
+                <a href="#components" class="nav-item">Components</a>
+                <a href="#interactions" class="nav-item">Interactions</a>
+                <a href="#accessibility" class="nav-item">Accessibility</a>
+                <a href="#responsive" class="nav-item">Responsive</a>
+            </nav>
+            <button class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">UX Styling Guide</h1>
+                <p class="hero-subtitle">A comprehensive guide for designing and developing consistent, accessible, and user-friendly applications across the Project Boxcar ecosystem.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Design Principles Section -->
+    <section id="design-principles" class="section">
+        <div class="container">
+            <h2 class="section-title">Design Principles</h2>
+            <p class="mb-xl">Our design principles guide all UX decisions across Project Boxcar applications. They ensure consistency, usability, and alignment with our brand values.</p>
+            
+            <div class="tabs">
+                <div class="tab active" data-target="core-principles">Core Principles</div>
+                <div class="tab" data-target="visual-hierarchy">Visual Hierarchy</div>
+                <div class="tab" data-target="consistency-rules">Consistency Rules</div>
+            </div>
+            
+            <div id="core-principles" class="tab-content active">
+                <div class="row">
+                    <div class="col">
+                        <h3>User-Centered Design</h3>
+                        <p>All design decisions should be made with the user's needs, goals, and context in mind. User research and testing should inform design choices.</p>
+                        <div class="placeholder mb-lg" style="height: 150px;">User-Centered Design Illustration</div>
+                        <p>Key considerations:</p>
+                        <ul>
+                            <li>Understand user goals and pain points</li>
+                            <li>Design for the primary user flow first</li>
+                            <li>Validate designs with user testing</li>
+                            <li>Iterate based on user feedback</li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h3>Clarity & Simplicity</h3>
+                        <p>Interfaces should be clear, intuitive, and free from unnecessary complexity. Users should understand what actions are available and how to accomplish their goals.</p>
+                        <div class="placeholder mb-lg" style="height: 150px;">Clarity & Simplicity Illustration</div>
+                        <p>Key considerations:</p>
+                        <ul>
+                            <li>Use clear, concise language</li>
+                            <li>Minimize cognitive load</li>
+                            <li>Provide clear feedback for actions</li>
+                            <li>Eliminate unnecessary elements</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row mt-xl">
+                    <div class="col">
+                        <h3>Consistency</h3>
+                        <p>Maintain consistency in design patterns, interactions, and terminology across all touchpoints to build user confidence and reduce learning curves.</p>
+                        <div class="placeholder mb-lg" style="height: 150px;">Consistency Illustration</div>
+                        <p>Key considerations:</p>
+                        <ul>
+                            <li>Use consistent UI patterns</li>
+                            <li>Maintain consistent terminology</li>
+                            <li>Apply brand elements consistently</li>
+                            <li>Follow platform conventions when appropriate</li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h3>Accessibility</h3>
+                        <p>Design for all users, including those with disabilities. Ensure interfaces are perceivable, operable, understandable, and robust.</p>
+                        <div class="placeholder mb-lg" style="height: 150px;">Accessibility Illustration</div>
+                        <p>Key considerations:</p>
+                        <ul>
+                            <li>Follow WCAG 2.1 AA standards</li>
+                            <li>Design for keyboard navigation</li>
+                            <li>Ensure sufficient color contrast</li>
+                            <li>Provide text alternatives for non-text content</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="visual-hierarchy" class="tab-content">
+                <h3 class="mb-lg">Visual Hierarchy Guidelines</h3>
+                <p class="mb-xl">Visual hierarchy guides users through the interface, highlighting important elements and creating a clear path for the user's attention.</p>
+                
+                <div class="row">
+                    <div class="col">
+                        <h4>Size & Scale</h4>
+                        <div class="placeholder mb-md" style="height: 180px;">Size & Scale Example</div>
+                        <p>Use size to indicate importance. Larger elements draw more attention and should be used for primary actions and content.</p>
+                        <ul>
+                            <li>Primary actions: Largest</li>
+                            <li>Secondary actions: Medium</li>
+                            <li>Tertiary actions: Smallest</li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h4>Color & Contrast</h4>
+                        <div class="placeholder mb-md" style="height: 180px;">Color & Contrast Example</div>
+                        <p>Use color strategically to guide attention. High-contrast elements stand out while low-contrast elements recede.</p>
+                        <ul>
+                            <li>Primary actions: Brand colors</li>
+                            <li>Secondary actions: Neutral colors</li>
+                            <li>Disabled states: Low contrast</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="row mt-xl">
+                    <div class="col">
+                        <h4>Spacing & Proximity</h4>
+                        <div class="placeholder mb-md" style="height: 180px;">Spacing & Proximity Example</div>
+                        <p>Group related elements together and use spacing to create distinct sections. Proper spacing improves readability and comprehension.</p>
+                        <ul>
+                            <li>Related items: Close proximity</li>
+                            <li>Unrelated items: Greater spacing</li>
+                            <li>Section breaks: Largest spacing</li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h4>Typography Hierarchy</h4>
+                        <div class="placeholder mb-md" style="height: 180px;">Typography Hierarchy Example</div>
+                        <p>Use typography to establish hierarchy. Vary font weight, size, and style to differentiate between content types.</p>
+                        <ul>
+                            <li>Headings: Larger, bolder</li>
+                            <li>Subheadings: Medium weight</li>
+                            <li>Body text: Regular weight</li>
+                            <li>Captions: Smaller, lighter</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="consistency-rules" class="tab-content">
+                <h3 class="mb-lg">Consistency Rules</h3>
+                <p class="mb-xl">Consistency creates familiarity and reduces cognitive load. Follow these rules to maintain consistency across all Project Boxcar applications.</p>
+                
+                <div class="row">
+                    <div class="col">
+                        <h4>Visual Consistency</h4>
+                        <p>Maintain consistent visual elements across all applications:</p>
+                        <ul>
+                            <li>Use the established color palette</li>
+                            <li>Follow typography guidelines</li>
+                            <li>Maintain consistent iconography style</li>
+                            <li>Use standard component styles</li>
+                            <li>Apply spacing consistently</li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h4>Functional Consistency</h4>
+                        <p>Ensure consistent behavior across all applications:</p>
+                        <ul>
+                            <li>Use standard interaction patterns</li>
+                            <li>Maintain consistent navigation models</li>
+                            <li>Apply consistent feedback mechanisms</li>
+                            <li>Use standard error handling approaches</li>
+                            <li>Implement consistent loading states</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="row mt-xl">
+                    <div class="col">
+                        <h4>Language Consistency</h4>
+                        <p>Use consistent terminology and voice across all applications:</p>
+                        <ul>
+                            <li>Maintain consistent feature naming</li>
+                            <li>Use standard error messages</li>
+                            <li>Apply consistent labeling for actions</li>
+                            <li>Follow established voice and tone guidelines</li>
+                            <li>Use consistent abbreviations and acronyms</li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h4>Platform Consistency</h4>
+                        <p>Balance Project Boxcar consistency with platform conventions:</p>
+                        <ul>
+                            <li>Respect platform-specific interaction patterns</li>
+                            <li>Adapt to platform-specific navigation models</li>
+                            <li>Consider platform-specific component styles</li>
+                            <li>Maintain core brand identity across platforms</li>
+                            <li>Adapt to platform-specific layout constraints</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Layout Guidelines Section -->
+    <section id="layout" class="section">
+        <div class="container">
+            <h2 class="section-title">Layout Guidelines</h2>
+            <p class="mb-xl">Our layout system provides a consistent framework for organizing content and components across all Project Boxcar applications.</p>
+            
+            <div class="tabs">
+                <div class="tab active" data-target="grid-system">Grid System</div>
+                <div class="tab" data-target="spacing-alignment">Spacing & Alignment</div>
+                <div class="tab" data-target="screen-density">Screen Density</div>
+            </div>
+            
+            <div id="grid-system" class="tab-content active">
+                <h3 class="mb-lg">Grid System</h3>
+                <p class="mb-xl">Our grid system provides a flexible foundation for layout design across all screen sizes.</p>
+                
+                <div class="row">
+                    <div class="col">
+                        <h4>Base Grid</h4>
+                        <div class="placeholder mb-md" style="height: 200px;">Base Grid Illustration</div>
+                        <p>Our base grid uses a 12-column layout with responsive breakpoints:</p>
+                        <ul>
+                            <li>Column width: Flexible</li>
+                            <li>Gutter width: 24px (adjusts at breakpoints)</li>
+                            <li>Margin width: 5% of viewport (min: 16px)</li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h4>Grid Implementation</h4>
+                        <div class="code-block">
+                            <code>
+/* CSS Grid Implementation */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 24px;
+  padding: 0 5%;
+}
+
+/* Example column spans */
+.col-4 {
+  grid-column: span 4;
+}
+
+.col-6 {
+  grid-column: span 6;
+}
+
+.col-12 {
+  grid-column: span 12;
+}
+                            </code>
+                        </div>
+                        <p>Use the grid system to create consistent layouts that adapt to different screen sizes.</p>
+                    </div>
+                </div>
+                
+                <div class="row mt-xl">
+                    <div class="col">
+                        <h4>Breakpoints</h4>
+                        <p>Our responsive grid uses the following breakpoints:</p>
+                        <ul>
+                            <li><strong>Mobile:</strong> 0-767px</li>
+                            <li><strong>Tablet:</strong> 768px-1023px</li>
+                            <li><strong>Desktop:</strong> 1024px-1439px</li>
+                            <li><strong>Large Desktop:</strong> 1440px+</li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h4>Grid Behavior</h4>
+                        <p>The grid adapts to different screen sizes:</p>
+                        <ul>
+                            <li><strong>Mobile:</strong> Stacked columns (12 spans)</li>
+                            <li><strong>Tablet:</strong> Reduced column spans</li>
+                            <li><strong>Desktop:</strong> Full grid implementation</li>
+                            <li><strong>Large Desktop:</strong> Max-width container</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="spacing-alignment" class="tab-content">
+                <h3 class="mb-lg">Spacing & Alignment</h3>
+                <p class="mb-xl">Consistent spacing and alignment create visual harmony and improve readability.</p>
+                
+                <div class="row">
+                    <div class="col">
+                        <h4>Spacing Scale</h4>
+                        <div class="placeholder mb-md" style="height: 180px;">Spacing Scale Illustration</div>
+                        <p>Use our spacing scale for consistent margins and padding:</p>
+                        <ul>
+                            <li><strong>XS:</strong> 8px (0.5rem)</li>
+                            <li><strong>SM:</strong> 16px (1rem)</li>
+                            <li><strong>MD:</strong> 24px (1.5rem)</li>
+                            <li><strong>LG:</strong> 32px (2rem)</li>
+                            <li><strong>XL:</strong> 48px (3rem)</li>
+                            <li><strong>XXL:</strong> 64px (4rem)</li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h4>Spacing Implementation</h4>
+                        <div class="code-block">
+                            <code>
+/* CSS Variables for Spacing */
+:root {
+  --spacing-xs: 8px;
+  --spacing-sm: 16px;
+  --spacing-md: 24px;
+  --spacing-lg: 32px;
+  --spacing-xl: 48px;
+  --spacing-xxl: 64px;
+}
+
+/* Example usage */
+.card {
+  margin-bottom: var(--spacing-md);
+  padding: var(--spacing-sm);
+}
+
+.section {
+  margin-bottom: var(--spacing-xl);
+}
+                            </code>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row mt-xl">
+                    <div class="col">
+                        <h4>Alignment Principles</h4>
+                        <div class="placeholder mb-md" style="height: 180px;">Alignment Principles Illustration</div>
+                        <p>Follow these alignment principles for consistent layouts:</p>
+                        <ul>
+                            <li>Align text and components to a common edge</li>
+                            <li>Use consistent text alignment within sections</li>
+                            <li>Align related elements to create visual connections</li>
+                            <li>Maintain consistent baseline alignment for text</li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h4>Common Alignment Patterns</h4>
+                        <p>Use these common alignment patterns:</p>
+                        <ul>
+                            <li><strong>Form fields:</strong> Left-aligned labels, inputs full width</li>
+                            <li><strong>Buttons:</strong> Right-aligned in forms, centered in modals</li>
+                            <li><strong>Lists:</strong> Left-aligned with consistent indentation</li>
+                            <li><strong>Headers:</strong> Left-aligned with content</li>
+                            <li><strong>Icons:</strong> Vertically centered with associated text</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="screen-density" class="tab-content">
+                <h3 class="mb-lg">Screen Density</h3>
+                <p class="mb-xl">Screen density refers to the amount of content and spacing on the screen. Appropriate density improves usability and readability.</p>
+                
+                <div class="row">
+                    <div class="col">
+                        <h4>Density Guidelines</h4>
+                        <div class="placeholder mb-md" style="height: 180px;">Density Guidelines Illustration</div>
+                        <p>Follow these guidelines for appropriate screen density:</p>
+                        <ul>
+                            <li>Maintain sufficient whitespace between elements</li>
+                            <li>Group related elements together</li>
+                            <li>Limit the number of elements on screen</li>
+                            <li>Use progressive disclosure for complex interfaces</li>
+                            <li>Adjust density based on screen size and context</li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h4>Density Variations</h4>
+                        <p>Different contexts may require different density settings:</p>
+                        <ul>
+                            <li><strong>Compact:</strong> For data-heavy interfaces (tables, dashboards)</li>
+                            <li><strong>Standard:</strong> For most application interfaces</li>
+                            <li><strong>Comfortable:</strong> For content-focused interfaces</li>
+                        </ul>
+                        <div class="placeholder mb-md" style="height: 180px;">Density Variations Illustration</div>
+                    </div>
+                </div>
+                
+                <div class="row mt-xl">
+                    <div class="col">
+                        <h4>Touch Targets</h4>
+                        <p>Ensure appropriate touch target sizes for interactive elements:</p>
+                        <ul>
+                            <li><strong>Minimum size:</strong> 44px × 44px</li>
+                            <li><strong>Minimum spacing:</strong> 8px between targets</li>
+                            <li><strong>Primary actions:</strong> Larger touch targets</li>
+                            <li><strong>Destructive actions:</strong> Separated from other actions</li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h4>Content Density</h4>
+                        <p>Balance content density with readability:</p>
+                        <ul>
+                            <li><strong>Line length:</strong> 50-75 characters per line</li>
+                            <li><strong>Line height:</strong> 1.5 for body text</li>
+                            <li><strong>Paragraph spacing:</strong> At least 1.5× the font size</li>
+                            <li><strong>Section spacing:</strong> At least 2× the font size</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Component Library Section -->
+    <section id="components" class="section">
+        <div class="container">
+            <h2 class="section-title">Component Library</h2>
+            <p class="mb-xl">Our component library provides a consistent set of UI elements for building Project Boxcar applications.</p>
+            
+            <div class="tabs">
+                <div class="tab active" data-target="app-components">App Components</div>
+                <div class="tab" data-target="component-states">Component States</div>
+                <div class="tab" data-target="usage-guidelines">Usage Guidelines</div>
+            </div>
+            
+            <div id="app-components" class="tab-content active">
+                <h3 class="mb-lg">App-Specific Components</h3>
+                <p class="mb-xl">These components are designed specifically for application interfaces.</p>
+                
+                <div class="component-grid">
+                    <div class="component-item">
+                        <h4 class="component-title">App Navigation</h4>
+                        <div class="placeholder mb-md" style="height: 180px;">App Navigation Component</div>
+                        <p>Navigation components for app interfaces, including tab bars, side navigation, and breadcrumbs.</p>
+                        <div class="code-block mt-md">
+                            <code>
+<nav class="app-nav">
+  <a href="#" class="app-nav-item active">Home</a>
+  <a href="#" class="app-nav-item">Features</a>
+  <a href="#" class="app-nav-item">Settings</a>
+  <a href="#" class="app-nav-item">Profile</a>
+</nav>
+                            </code>
+                        </div>
+                    </div>
+                    <div class="component-item">
+                        <h4 class="component-title">Data Cards</h4>
+                        <div class="placeholder mb-md" style="height: 180px;">Data Card Component</div>
+                        <p>Cards for displaying data with consistent styling and layout.</p>
+                        <div class="code-block mt-md">
+                            <code>
+<div class="data-card">
+  <div class="data-card-header">
+    <h3 class="data-card-title">Card Title</h3>
+    <div class="data-card-actions">
+      <button class="icon-button">...</button>
+    </div>
+  </div>
+  <div class="data-card-content">
+    <p>Card content goes here.</p>
+  </div>
+  <div class="data-card-footer">
+    <button class="btn btn-text">Action</button>
+  </div>
+</div>
+                            </code>
+                        </div>
+                    </div>
+                    <div class="component-item">
+                        <h4 class="component-title">Action Sheets</h4>
+                        <div class="placeholder mb-md" style="height: 180px;">Action Sheet Component</div>
+                        <p>Bottom sheets for presenting contextual actions to users.</p>
+                        <div class="code-block mt-md">
+                            <code>
+<div class="action-sheet">
+  <div class="action-sheet-header">
+    <h3 class="action-sheet-title">Available Actions</h3>
+    <button class="close-button">×</button>
+  </div>
+  <div class="action-sheet-content">
+    <button class="action-item">Edit</button>
+    <button class="action-item">Share</button>
+    <button class="action-item">Delete</button>
+  </div>
+</div>
+                            </code>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="component-grid mt-xl">
+                    <div class="component-item">
+                        <h4 class="component-title">Data Tables</h4>
+                        <div class="placeholder mb-md" style="height: 180px;">Data Table Component</div>
+                        <p>Tables for displaying structured data with sorting and filtering capabilities.</p>
+                        <div class="code-block mt-md">
+                            <code>
+<table class="data-table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Status</th>
+      <th>Date</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Item 1</td>
+      <td>Active</td>
+      <td>2025-04-14</td>
+      <td>
+        <button class="btn btn-icon">Edit</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+                            </code>
+                        </div>
+                    </div>
+                    <div class="component-item">
+                        <h4 class="component-title">Form Controls</h4>
+                        <div class="placeholder mb-md" style="height: 180px;">Form Controls Component</div>
+                        <p>Specialized form controls for application interfaces.</p>
+                        <div class="code-block mt-md">
+                            <code>
+<div class="form-group">
+  <label class="form-label">Search</label>
+  <div class="search-input">
+    <input type="text" placeholder="Search...">
+    <button class="search-button">
+      <span class="search-icon"></span>
+    </button>
+  </div>
+</div>
+                            </code>
+                        </div>
+                    </div>
+                    <div class="component-item">
+                        <h4 class="component-title">Status Indicators</h4>
+                        <div class="placeholder mb-md" style="height: 180px;">Status Indicators Component</div>
+                        <p>Visual indicators for displaying status information.</p>
+                        <div class="code-block mt-md">
+                            <code>
+<span class="status-badge success">Active</span>
+<span class="status-badge warning">Pending</span>
+<span class="status-badge error">Failed</span>
+<span class="status-badge neutral">Draft</span>
+                            </code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="component-states" class="tab-content">
+                <h3 class="mb-lg">Component States</h3>
+                <p class="mb-xl">Components can exist in different states. Consistent state styling helps users understand the current status of the interface.</p>
+                
+                <div class="row">
+                    <div class="col">
+                        <h4>Interactive States</h4>
+                        <p>All interactive components should have the following states:</p>
+                        <ul>
+                            <li><strong>Default:</strong> The normal state of the component</li>
+                            <li><strong>Hover:</strong> When the cursor is over the component</li>
+                            <li><strong>Focus:</strong> When the component has keyboard focus</li>
+                            <li><strong>Active/Pressed:</strong> When the component is being clicked/tapped</li>
+                            <li><strong>Disabled:</strong> When the component is not available for interaction</li>
+                        </ul>
+                        <div class="placeholder mb-md" style="height: 180px;">Interactive States Illustration</div>
+                    </div>
+                    <div class="col">
+                        <h4>State Implementation</h4>
+                        <div class="code-block">
+                            <code>
+/* Button States Example */
+.btn {
+  background-color: var(--primary-blue);
+  color: white;
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  background-color: var(--primary-blue-dark);
+  transform: translateY(-2px);
+}
+
+.btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 162, 229, 0.3);
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn:disabled {
+  background-color: var(--neutral-gray);
+  color: var(--neutral-gray-dark);
+  cursor: not-allowed;
+  transform: none;
+}
+                            </code>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row mt-xl">
+                    <div class="col">
+                        <h4>Content States</h4>
+                        <p>Content components can have the following states:</p>
+                        <ul>
+                            <li><strong>Loading:</strong> When content is being fetched</li>
+                            <li><strong>Empty:</strong> When no content is available</li>
+                            <li><strong>Error:</strong> When content failed to load</li>
+                            <li><strong>Partial:</strong> When only some content is available</li>
+                            <li><strong>Loaded:</strong> When all content is available</li>
+                        </ul>
+                        <div class="placeholder mb-md" style="height: 180px;">Content States Illustration</div>
+                    </div>
+                    <div class="col">
+                        <h4>Validation States</h4>
+                        <p>Form components can have the following validation states:</p>
+                        <ul>
+                            <li><strong>Default:</strong> Before user interaction</li>
+                            <li><strong>Focus:</strong> During user interaction</li>
+                            <li><strong>Valid:</strong> When input meets requirements</li>
+                            <li><strong>Invalid:</strong> When input fails validation</li>
+                            <li><strong>Warning:</strong> When input needs attention</li>
+                        </ul>
+                        <div class="placeholder mb-md" style="height: 180px;">Validation States Illustration</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="usage-guidelines" class="tab-content">
+                <h3 class="mb-lg">Usage Guidelines</h3>
+                <p class="mb-xl">Follow these guidelines to ensure consistent and effective use of components across all applications.</p>
+                
+                <div class="row">
+                    <div class="col">
+                        <h4>Component Selection</h4>
+                        <p>Choose the appropriate component for each use case:</p>
+                        <ul>
+                            <li>Use standard components whenever possible</li>
+                            <li>Select components based on the user's task</li>
+                            <li>Consider the context and environment</li>
+                            <li>Maintain consistency across similar functions</li>
+                            <li>Avoid mixing component styles within a section</li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h4>Component Customization</h4>
+                        <p>When customizing components:</p>
+                        <ul>
+                            <li>Maintain the core functionality and behavior</li>
+                            <li>Preserve accessibility features</li>
+                            <li>Keep consistent with the design system</li>
+                            <li>Document any custom variations</li>
+                            <li>Test customizations thoroughly</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="row mt-xl">
+                    <div class="col">
+                        <h4>Component Combinations</h4>
+                        <p>When combining components:</p>
+                        <ul>
+                            <li>Ensure logical grouping and hierarchy</li>
+                            <li>Maintain consistent spacing between components</li>
+                            <li>Consider the overall cognitive load</li>
+                            <li>Test combinations for usability</li>
+                            <li>Ensure accessibility of the combined interface</li>
+                        </ul>
+                        <div class="placeholder mb-md" style="height: 180px;">Component Combinations Example</div>
+                    </div>
+                    <div class="col">
+                        <h4>Platform Considerations</h4>
+                        <p>Adapt components for different platforms:</p>
+                        <ul>
+                            <li><strong>Web:</strong> Focus on responsive behavior</li>
+                            <li><strong>Mobile:</strong> Optimize for touch and smaller screens</li>
+                            <li><strong>Desktop:</strong> Leverage additional screen space</li>
+                            <li><strong>Tablet:</strong> Balance between touch and precision</li>
+                            <li><strong>Native vs. Web:</strong> Consider platform conventions</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Interactions Section -->
+    <section id="interactions" class="section">
+        <div class="container">
+            <h2 class="section-title">Interaction Patterns</h2>
+            <p class="mb-xl">Consistent interaction patterns create intuitive and predictable experiences across all Project Boxcar applications.</p>
+            
+            <div class="tabs">
+                <div class="tab active" data-target="standard-interactions">Standard Interactions</div>
+                <div class="tab" data-target="animation-motion">Animation & Motion</div>
+                <div class="tab" data-target="feedback-patterns">Feedback Patterns</div>
+            </div>
+            
+            <div id="standard-interactions" class="tab-content active">
+                <h3 class="mb-lg">Standard Interactions</h3>
+                <p class="mb-xl">These interaction patterns should be used consistently across all applications.</p>
+                
+                <div class="row">
+                    <div class="col">
+                        <h4>Touch & Click Interactions</h4>
+                        <div class="placeholder mb-md" style="height: 180px;">Touch & Click Illustration</div>
+                        <p>Standard patterns for touch and click interactions:</p>
+                        <ul>
+                            <li><strong>Tap/Click:</strong> Primary action for buttons and links</li>
+                            <li><strong>Double Tap/Click:</strong> Used for specific actions like zoom or select</li>
+                            <li><strong>Long Press:</strong> Reveals contextual actions or additional information</li>
+                            <li><strong>Swipe:</strong> Used for scrolling, navigation, or dismissal</li>
+                            <li><strong>Pinch:</strong> Used for zooming in and out</li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h4>Keyboard Interactions</h4>
+                        <div class="placeholder mb-md" style="height: 180px;">Keyboard Interaction Illustration</div>
+                        <p>Standard patterns for keyboard interactions:</p>
+                        <ul>
+                            <li><strong>Tab:</strong> Navigate between interactive elements</li>
+                            <li><strong>Enter/Space:</strong> Activate the focused element</li>
+                            <li><strong>Arrow Keys:</strong> Navigate within components</li>
+                            <li><strong>Escape:</strong> Close, cancel, or exit current context</li>
+                            <li><strong>Shortcuts:</strong> Provide keyboard shortcuts for common actions</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="row mt-xl">
+                    <div class="col">
+                        <h4>Form Interactions</h4>
+                        <div class="placeholder mb-md" style="height: 180px;">Form Interactions Illustration</div>
+                        <p>Standard patterns for form interactions:</p>
+                        <ul>
+                            <li><strong>Input Focus:</strong> Clear visual indication of focused field</li>
+                            <li><strong>Validation:</strong> Immediate feedback for input validation</li>
+                            <li><strong>Auto-complete:</strong> Suggest values based on input</li>
+                            <li><strong>Error Recovery:</strong> Clear error messages with recovery options</li>
+                            <li><strong>Submission:</strong> Clear indication of form submission status</li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h4>Navigation Patterns</h4>
+                        <div class="placeholder mb-md" style="height: 180px;">Navigation Patterns Illustration</div>
+                        <p>Standard patterns for navigation:</p>
+                        <ul>
+                            <li><strong>Hierarchical:</strong> Navigate through levels of content</li>
+                            <li><strong>Hub and Spoke:</strong> Central hub with spokes to different sections</li>
+                            <li><strong>Tabs:</strong> Switch between parallel content sections</li>
+                            <li><strong>Drill-down:</strong> Navigate from overview to details</li>
+                            <li><strong>Search:</strong> Find content directly via search</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="animation-motion" class="tab-content">
+                <h3 class="mb-lg">Animation & Motion</h3>
+                <p class="mb-xl">Animation and motion help users understand state changes, provide feedback, and create a more engaging experience.</p>
+                
+                <div class="row">
+                    <div class="col">
+                        <h4>Animation Principles</h4>
+                        <div class="placeholder mb-md" style="height: 180px;">Animation Principles Illustration</div>
+                        <p>Follow these principles for effective animations:</p>
+                        <ul>
+                            <li><strong>Purpose:</strong> Animation should serve a purpose, not just decorate</li>
+                            <li><strong>Subtlety:</strong> Animations should be subtle and not distracting</li>
+                            <li><strong>Consistency:</strong> Use consistent timing and easing across similar animations</li>
+                            <li><strong>Performance:</strong> Optimize animations for performance</li>
+                            <li><strong>Accessibility:</strong> Respect user preferences for reduced motion</li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h4>Animation Types</h4>
+                        <div class="placeholder mb-md" style="height: 180px;">Animation Types Illustration</div>
+                        <p>Common animation types in our applications:</p>
+                        <ul>
+                            <li><strong>Transitions:</strong> Smooth changes between states</li>
+                            <li><strong>Feedback:</strong> Visual confirmation of user actions</li>
+                            <li><strong>Loading:</strong> Indicate content is being loaded</li>
+                            <li><strong>Attention:</strong> Draw attention to important elements</li>
+                            <li><strong>Orientation:</strong> Help users understand spatial relationships</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="row mt-xl">
+                    <div class="col">
+                        <h4>Animation Timing</h4>
+                        <p>Use consistent timing for animations:</p>
+                        <ul>
+                            <li><strong>Extra Short:</strong> 100ms (micro-interactions)</li>
+                            <li><strong>Short:</strong> 200ms (button states, toggles)</li>
+                            <li><strong>Medium:</strong> 300ms (transitions, reveals)</li>
+                            <li><strong>Long:</strong> 500ms (page transitions, complex animations)</li>
+                        </ul>
+                        <div class="code-block">
+                            <code>
+/* Animation Timing Variables */
+:root {
+  --animation-xs: 100ms;
+  --animation-sm: 200ms;
+  --animation-md: 300ms;
+  --animation-lg: 500ms;
+}
+
+/* Example usage */
+.button {
+  transition: all var(--animation-sm) ease-out;
+}
+
+.page-transition {
+  transition: all var(--animation-lg) cubic-bezier(0.4, 0, 0.2, 1);
+}
+                            </code>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <h4>Easing Functions</h4>
+                        <p>Use appropriate easing functions for different animation types:</p>
+                        <ul>
+                            <li><strong>Ease-out:</strong> For elements entering the screen</li>
+                            <li><strong>Ease-in:</strong> For elements exiting the screen</li>
+                            <li><strong>Ease-in-out:</strong> For elements moving within the screen</li>
+                            <li><strong>Linear:</strong> For continuous animations (loading spinners)</li>
+                        </ul>
+                        <div class="code-block">
+                            <code>
+/* Easing Function Variables */
+:root {
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Example usage */
+.enter-animation {
+  transition: all 300ms var(--ease-out);
+}
+
+.exit-animation {
+  transition: all 300ms var(--ease-in);
+}
+                            </code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="feedback-patterns" class="tab-content">
+                <h3 class="mb-lg">Feedback Patterns</h3>
+                <p class="mb-xl">Feedback patterns help users understand the results of their actions and the current state of the system.</p>
+                
+                <div class="row">
+                    <div class="col">
+                        <h4>Visual Feedback</h4>
+                        <div class="placeholder mb-md" style="height: 180px;">Visual Feedback Illustration</div>
+                        <p>Provide clear visual feedback for user actions:</p>
+                        <ul>
+                            <li><strong>State Changes:</strong> Clear visual indication of state changes</li>
+                            <li><strong>Hover States:</strong> Visual feedback on hover</li>
+                            <li><strong>Focus States:</strong> Clear indication of focused elements</li>
+                            <li><strong>Active States:</strong> Visual feedback during interaction</li>
+                            <li><strong>Success/Error States:</strong> Clear indication of success or failure</li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h4>Loading States</h4>
+                        <div class="placeholder mb-md" style="height: 180px;">Loading States Illustration</div>
+                        <p>Provide clear feedback during loading operations:</p>
+                        <ul>
+                            <li><strong>Spinners:</strong> For short, indeterminate loading</li>
+                            <li><strong>Progress Bars:</strong> For longer, determinate loading</li>
+                            <li><strong>Skeleton Screens:</strong> For content loading</li>
+                            <li><strong>Background Loading:</strong> For non-blocking operations</li>
+                            <li><strong>Optimistic UI:</strong> Show expected result before confirmation</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="row mt-xl">
+                    <div class="col">
+                        <h4>Notifications</h4>
+                        <div class="placeholder mb-md" style="height: 180px;">Notifications Illustration</div>
+                        <p>Use appropriate notification patterns:</p>
+                        <ul>
+                            <li><strong>Toast Messages:</strong> For non-critical, temporary information</li>
+                            <li><strong>Banners:</strong> For important, persistent information</li>
+                            <li><strong>Dialogs:</strong> For critical information requiring action</li>
+                            <li><strong>In-line Notifications:</strong> For contextual information</li>
+                            <li><strong>Badges:</strong> For counts or status indicators</li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h4>Error Handling</h4>
+                        <div class="placeholder mb-md" style="height: 180px;">Error Handling Illustration</div>
+                        <p>Provide clear error feedback with recovery options:</p>
+                        <ul>
+                            <li><strong>Validation Errors:</strong> Immediate feedback for input errors</li>
+                            <li><strong>System Errors:</strong> Clear explanation of system failures</li>
+                            <li><strong>Recovery Options:</strong> Provide clear paths to recover from errors</li>
+                            <li><strong>Contextual Help:</strong> Offer guidance to resolve issues</li>
+                            <li><strong>Graceful Degradation:</strong> Maintain functionality when possible</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Accessibility Section -->
+    <section id="accessibility" class="section">
+        <div class="container">
+            <h2 class="section-title">Accessibility Guidelines</h2>
+            <p class="mb-xl">Accessibility is a core principle of our design system. These guidelines ensure our applications are usable by everyone, including people with disabilities.</p>
+            
+            <div class="tabs">
+                <div class="tab active" data-target="wcag-principles">WCAG Principles</div>
+                <div class="tab" data-target="keyboard-navigation">Keyboard Navigation</div>
+                <div class="tab" data-target="screen-readers">Screen Readers</div>
+            </div>
+            
+            <div id="wcag-principles" class="tab-content active">
+                <h3 class="mb-lg">WCAG Principles</h3>
+                <p class="mb-xl">Our applications follow the Web Content Accessibility Guidelines (WCAG) 2.1 AA standards, which are organized around four principles: Perceivable, Operable, Understandable, and Robust.</p>
+                
+                <div class="row">
+                    <div class="col">
+                        <h4>Perceivable</h4>
+                        <div class="placeholder mb-md" style="height: 180px;">Perceivable Illustration</div>
+                        <p>Information and user interface components must be presentable to users in ways they can perceive:</p>
+                        <ul>
+                            <li><strong>Text Alternatives:</strong> Provide text alternatives for non-text content</li>
+                            <li><strong>Time-based Media:</strong> Provide alternatives for time-based media</li>
+                            <li><strong>Adaptable:</strong> Create content that can be presented in different ways</li>
+                            <li><strong>Distinguishable:</strong> Make it easier for users to see and hear content</li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h4>Operable</h4>
+                        <div class="placeholder mb-md" style="height: 180px;">Operable Illustration</div>
+                        <p>User interface components and navigation must be operable:</p>
+                        <ul>
+                            <li><strong>Keyboard Accessible:</strong> Make all functionality available from a keyboard</li>
+                            <li><strong>Enough Time:</strong> Provide users enough time to read and use content</li>
+                            <li><strong>Seizures:</strong> Do not design content in a way that is known to cause seizures</li>
+                            <li><strong>Navigable:</strong> Provide ways to help users navigate and find content</li>
+                            <li><strong>Input Modalities:</strong> Make it easier to use inputs other than keyboard</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="row mt-xl">
+                    <div class="col">
+                        <h4>Understandable</h4>
+                        <div class="placeholder mb-md" style="height: 180px;">Understandable Illustration</div>
+                        <p>Information and operation of the user interface must be understandable:</p>
+                        <ul>
+                            <li><strong>Readable:</strong> Make text content readable and understandable</li>
+                            <li><strong>Predictable:</strong> Make web pages appear and operate in predictable ways</li>
+                            <li><strong>Input Assistance:</strong> Help users avoid and correct mistakes</li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h4>Robust</h4>
+                        <div class="placeholder mb-md" style="height: 180px;">Robust Illustration</div>
+                        <p>Content must be robust enough to be interpreted by a wide variety of user agents, including assistive technologies:</p>
+                        <ul>
+                            <li><strong>Compatible:</strong> Maximize compatibility with current and future user agents</li>
+                            <li><strong>Parsing:</strong> Ensure proper markup for assistive technologies</li>
+                            <li><strong>Name, Role, Value:</strong> Ensure proper identification of UI components</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="keyboard-navigation" class="tab-content">
+                <h3 class="mb-lg">Keyboard Navigation</h3>
+                <p class="mb-xl">All functionality must be accessible using only a keyboard, without requiring specific timings for individual keystrokes.</p>
+                
+                <div class="row">
+                    <div class="col">
+                        <h4>Focus Management</h4>
+                        <div class="placeholder mb-md" style="height: 180px;">Focus Management Illustration</div>
+                        <p>Proper focus management is essential for keyboard navigation:</p>
+                        <ul>
+                            <li><strong>Focus Indicators:</strong> Provide clear visual focus indicators</li>
+                            <li><strong>Focus Order:</strong> Ensure logical focus order that follows content flow</li>
+                            <li><strong>Focus Trapping:</strong> Trap focus within modal dialogs and overlays</li>
+                            <li><strong>Focus Restoration:</strong> Restore focus when dialogs are closed</li>
+                            <li><strong>Skip Links:</strong> Provide skip links for navigation</li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h4>Keyboard Interactions</h4>
+                        <div class="placeholder mb-md" style="height: 180px;">Keyboard Interactions Illustration</div>
+                        <p>Standard keyboard interactions for common components:</p>
+                        <ul>
+                            <li><strong>Tab:</strong> Move focus to the next focusable element</li>
+                            <li><strong>Shift+Tab:</strong> Move focus to the previous focusable element</li>
+                            <li><strong>Enter/Space:</strong> Activate the focused element</li>
+                            <li><strong>Arrow Keys:</strong> Navigate within components (e.g., menus, tabs)</li>
+                            <li><strong>Escape:</strong> Close dialogs, menus, or cancel actions</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="row mt-xl">
+                    <div class="col">
+                        <h4>Custom Components</h4>
+                        <p>When creating custom components, ensure proper keyboard support:</p>
+                        <ul>
+                            <li>Use appropriate ARIA roles and properties</li>
+                            <li>Implement expected keyboard interactions</li>
+                            <li>Test with keyboard-only navigation</li>
+                            <li>Follow established patterns for similar components</li>
+                        </ul>
+                        <div class="code-block">
+                            <code>
+<!-- Example of a custom dropdown with keyboard support -->
+<div class="custom-dropdown" role="combobox" aria-expanded="false" aria-haspopup="listbox" tabindex="0">
+  <span class="selected-option">Select an option</span>
+  <ul role="listbox" hidden>
+    <li role="option" tabindex="-1">Option 1</li>
+    <li role="option" tabindex="-1">Option 2</li>
+    <li role="option" tabindex="-1">Option 3</li>
+  </ul>
+</div>
+                            </code>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <h4>Testing Keyboard Navigation</h4>
+                        <p>Test keyboard navigation throughout the application:</p>
+                        <ul>
+                            <li>Navigate using only the keyboard</li>
+                            <li>Ensure all interactive elements are focusable</li>
+                            <li>Verify logical focus order</li>
+                            <li>Check for keyboard traps</li>
+                            <li>Test with different browsers and screen readers</li>
+                        </ul>
+                        <div class="placeholder mb-md" style="height: 180px;">Keyboard Testing Illustration</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="screen-readers" class="tab-content">
+                <h3 class="mb-lg">Screen Reader Support</h3>
+                <p class="mb-xl">Applications must be compatible with screen readers and other assistive technologies.</p>
+                
+                <div class="row">
+                    <div class="col">
+                        <h4>Semantic HTML</h4>
+                        <div class="placeholder mb-md" style="height: 180px;">Semantic HTML Illustration</div>
+                        <p>Use semantic HTML elements to provide structure and meaning:</p>
+                        <ul>
+                            <li>Use heading elements (<code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code>) for headings</li>
+                            <li>Use <code>&lt;button&gt;</code> for buttons, <code>&lt;a&gt;</code> for links</li>
+                            <li>Use <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, etc. for page structure</li>
+                            <li>Use <code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code>, <code>&lt;dl&gt;</code> for lists</li>
+                            <li>Use <code>&lt;table&gt;</code> for tabular data with proper headers</li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h4>ARIA Attributes</h4>
+                        <div class="placeholder mb-md" style="height: 180px;">ARIA Attributes Illustration</div>
+                        <p>Use ARIA attributes when semantic HTML is not sufficient:</p>
+                        <ul>
+                            <li>Use <code>aria-label</code> or <code>aria-labelledby</code> for labeling elements</li>
+                            <li>Use <code>aria-describedby</code> for additional descriptions</li>
+                            <li>Use <code>aria-expanded</code>, <code>aria-haspopup</code> for interactive elements</li>
+                            <li>Use <code>aria-live</code> regions for dynamic content</li>
+                            <li>Use appropriate ARIA roles for custom components</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="row mt-xl">
+                    <div class="col">
+                        <h4>Alternative Text</h4>
+                        <p>Provide alternative text for non-text content:</p>
+                        <ul>
+                            <li>Use <code>alt</code> attributes for images</li>
+                            <li>Use <code>aria-label</code> for icons and SVGs</li>
+                            <li>Provide captions and transcripts for audio and video</li>
+                            <li>Make decorative images presentational with <code>alt=""</code></li>
+                            <li>Ensure alternative text conveys the same information as the visual content</li>
+                        </ul>
+                        <div class="code-block">
+                            <code>
+<!-- Informative image with alt text -->
+<img src="chart.png" alt="Bar chart showing sales growth of 25% in Q1 2025">
+
+<!-- Decorative image -->
+<img src="decorative-line.png" alt="" role="presentation">
+
+<!-- Icon with aria-label -->
+<span class="icon-delete" aria-label="Delete item"></span>
+                            </code>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <h4>Testing with Screen Readers</h4>
+                        <p>Test with popular screen readers to ensure compatibility:</p>
+                        <ul>
+                            <li><strong>NVDA:</strong> Free screen reader for Windows</li>
+                            <li><strong>JAWS:</strong> Commercial screen reader for Windows</li>
+                            <li><strong>VoiceOver:</strong> Built-in screen reader for macOS and iOS</li>
+                            <li><strong>TalkBack:</strong> Built-in screen reader for Android</li>
+                            <li><strong>Narrator:</strong> Built-in screen reader for Windows</li>
+                        </ul>
+                        <div class="placeholder mb-md" style="height: 180px;">Screen Reader Testing Illustration</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Responsive Design Section -->
+    <section id="responsive" class="section">
+        <div class="container">
+            <h2 class="section-title">Responsive Design</h2>
+            <p class="mb-xl">Our applications are designed to provide an optimal experience across a wide range of devices and screen sizes.</p>
+            
+            <div class="tabs">
+                <div class="tab active" data-target="responsive-principles">Principles</div>
+                <div class="tab" data-target="breakpoints">Breakpoints</div>
+                <div class="tab" data-target="mobile-first">Mobile-First Approach</div>
+            </div>
+            
+            <div id="responsive-principles" class="tab-content active">
+                <h3 class="mb-lg">Responsive Design Principles</h3>
+                <p class="mb-xl">Follow these principles to create responsive applications that work well across all devices.</p>
+                
+                <div class="row">
+                    <div class="col">
+                        <h4>Fluid Layouts</h4>
+                        <div class="placeholder mb-md" style="height: 180px;">Fluid Layouts Illustration</div>
+                        <p>Use fluid layouts that adapt to different screen sizes:</p>
+                        <ul>
+                            <li>Use relative units (%, em, rem) instead of fixed units (px)</li>
+                            <li>Use CSS Grid and Flexbox for flexible layouts</li>
+                            <li>Set maximum widths to prevent overly stretched layouts</li>
+                            <li>Use viewport units (vw, vh) for responsive sizing</li>
+                            <li>Maintain appropriate aspect ratios for media</li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h4>Responsive Images</h4>
+                        <div class="placeholder mb-md" style="height: 180px;">Responsive Images Illustration</div>
+                        <p>Optimize images for different screen sizes and resolutions:</p>
+                        <ul>
+                            <li>Use the <code>srcset</code> attribute for responsive images</li>
+                            <li>Use the <code>picture</code> element for art direction</li>
+                            <li>Set appropriate image dimensions</li>
+                            <li>Use SVGs when possible for resolution independence</li>
+                            <li>Optimize images for performance</li>
+                        </ul>
+                        <div class="code-block">
+                            <code>
+<!-- Responsive image with srcset -->
+<img src="image-800w.jpg"
+     srcset="image-480w.jpg 480w,
+             image-800w.jpg 800w,
+             image-1200w.jpg 1200w"
+     sizes="(max-width: 600px) 480px,
+            (max-width: 1024px) 800px,
+            1200px"
+     alt="Responsive image example">
+                            </code>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row mt-xl">
+                    <div class="col">
+                        <h4>Content Prioritization</h4>
+                        <div class="placeholder mb-md" style="height: 180px;">Content Prioritization Illustration</div>
+                        <p>Prioritize content based on screen size and user needs:</p>
+                        <ul>
+                            <li>Show the most important content first</li>
+                            <li>Hide or collapse secondary content on smaller screens</li>
+                            <li>Use progressive disclosure for complex information</li>
+                            <li>Adjust content hierarchy for different screen sizes</li>
+                            <li>Consider different user contexts on different devices</li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h4>Touch-Friendly Design</h4>
+                        <div class="placeholder mb-md" style="height: 180px;">Touch-Friendly Design Illustration</div>
+                        <p>Design for touch interactions on mobile devices:</p>
+                        <ul>
+                            <li>Use appropriate touch target sizes (minimum 44×44px)</li>
+                            <li>Provide sufficient spacing between interactive elements</li>
+                            <li>Place important actions within easy reach</li>
+                            <li>Support common touch gestures (tap, swipe, pinch)</li>
+                            <li>Provide visual feedback for touch interactions</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="breakpoints" class="tab-content">
+                <h3 class="mb-lg">Breakpoints</h3>
+                <p class="mb-xl">Use consistent breakpoints to create responsive layouts that adapt to different screen sizes.</p>
+                
+                <div class="row">
+                    <div class="col">
+                        <h4>Standard Breakpoints</h4>
+                        <div class="placeholder mb-md" style="height: 180px;">Standard Breakpoints Illustration</div>
+                        <p>Our standard breakpoints are based on common device sizes:</p>
+                        <ul>
+                            <li><strong>Small Mobile:</strong> 0-479px</li>
+                            <li><strong>Mobile:</strong> 480-767px</li>
+                            <li><strong>Tablet:</strong> 768-1023px</li>
+                            <li><strong>Desktop:</strong> 1024-1439px</li>
+                            <li><strong>Large Desktop:</strong> 1440px+</li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h4>Breakpoint Implementation</h4>
+                        <div class="code-block">
+                            <code>
+/* CSS Variables for Breakpoints */
+:root {
+  --breakpoint-sm: 480px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1440px;
+}
+
+/* Media Queries */
+@media (min-width: 480px) {
+  /* Small Mobile styles */
+}
+
+@media (min-width: 768px) {
+  /* Tablet styles */
+}
+
+@media (min-width: 1024px) {
+  /* Desktop styles */
+}
+
+@media (min-width: 1440px) {
+  /* Large Desktop styles */
+}
+                            </code>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row mt-xl">
+                    <div class="col">
+                        <h4>Component-Specific Breakpoints</h4>
+                        <p>Use component-specific breakpoints when necessary:</p>
+                        <ul>
+                            <li>Base breakpoints on content needs rather than device sizes</li>
+                            <li>Consider the natural breaking points of each component</li>
+                            <li>Use additional breakpoints for complex components</li>
+                            <li>Test components at various screen sizes</li>
+                            <li>Document component-specific breakpoints</li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h4>Testing Breakpoints</h4>
+                        <div class="placeholder mb-md" style="height: 180px;">Testing Breakpoints Illustration</div>
+                        <p>Test responsive designs at various screen sizes:</p>
+                        <ul>
+                            <li>Test at standard breakpoints</li>
+                            <li>Test at in-between sizes</li>
+                            <li>Test with browser developer tools</li>
+                            <li>Test on actual devices when possible</li>
+                            <li>Test in both portrait and landscape orientations</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="mobile-first" class="tab-content">
+                <h3 class="mb-lg">Mobile-First Approach</h3>
+                <p class="mb-xl">We follow a mobile-first approach to responsive design, starting with the mobile experience and progressively enhancing for larger screens.</p>
+                
+                <div class="row">
+                    <div class="col">
+                        <h4>Mobile-First Benefits</h4>
+                        <div class="placeholder mb-md" style="height: 180px;">Mobile-First Benefits Illustration</div>
+                        <p>Benefits of the mobile-first approach:</p>
+                        <ul>
+                            <li>Forces focus on core content and functionality</li>
+                            <li>Ensures good performance on mobile devices</li>
+                            <li>Simplifies progressive enhancement</li>
+                            <li>Aligns with how CSS naturally works</li>
+                            <li>Addresses the growing mobile user base</li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h4>Mobile-First Implementation</h4>
+                        <div class="code-block">
+                            <code>
+/* Base styles for all devices */
+.container {
+  padding: 1rem;
+}
+
+/* Tablet and up */
+@media (min-width: 768px) {
+  .container {
+    padding: 2rem;
+  }
+}
+
+/* Desktop and up */
+@media (min-width: 1024px) {
+  .container {
+    padding: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+                            </code>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row mt-xl">
+                    <div class="col">
+                        <h4>Layout Adaptations</h4>
+                        <div class="placeholder mb-md" style="height: 180px;">Layout Adaptations Illustration</div>
+                        <p>Common layout adaptations for different screen sizes:</p>
+                        <ul>
+                            <li><strong>Mobile:</strong> Single column, stacked elements</li>
+                            <li><strong>Tablet:</strong> Two columns, simplified navigation</li>
+                            <li><strong>Desktop:</strong> Multi-column, expanded navigation</li>
+                            <li><strong>Large Desktop:</strong> Wider content, optimized spacing</li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h4>Navigation Patterns</h4>
+                        <div class="placeholder mb-md" style="height: 180px;">Navigation Patterns Illustration</div>
+                        <p>Responsive navigation patterns:</p>
+                        <ul>
+                            <li><strong>Mobile:</strong> Hamburger menu, bottom navigation</li>
+                            <li><strong>Tablet:</strong> Collapsed navigation, tabs</li>
+                            <li><strong>Desktop:</strong> Horizontal navigation, mega menus</li>
+                            <li><strong>Large Desktop:</strong> Expanded navigation with additional features</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-8">
+                    <img src="assets/images/white-logo.svg" alt="Project Boxcar Logo" class="footer-logo">
+                    <p class="footer-text">© 2025 Project Boxcar. All rights reserved.</p>
+                    <p class="footer-text">This UX styling guide serves as the definitive reference for designing and developing consistent, accessible, and user-friendly applications across the Project Boxcar ecosystem.</p>
+                </div>
+                <div class="col-4">
+                    <h4 class="text-white mb-md">Quick Links</h4>
+                    <nav class="footer-nav">
+                        <a href="index.html" class="nav-item">Brand Guide</a>
+                        <a href="#design-principles" class="nav-item">Design Principles</a>
+                        <a href="#layout" class="nav-item">Layout</a>
+                        <a href="#components" class="nav-item">Components</a>
+                        <a href="#interactions" class="nav-item">Interactions</a>
+                        <a href="#accessibility" class="nav-item">Accessibility</a>
+                        <a href="#responsive" class="nav-item">Responsive</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Add this script for header scroll effect -->
+    <script>
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+
+    <script src="js/script.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/download-icons.js"></script>
+</body>
+</html>
