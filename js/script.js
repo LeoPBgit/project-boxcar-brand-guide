@@ -284,26 +284,45 @@ function initActiveNavigation() {
   const sections = document.querySelectorAll('section[id]');
   const navItems = document.querySelectorAll('.nav-item');
   
-  // Set initial active state for UX Styling page
-  if (window.location.pathname.includes('ux-styling.html')) {
-    navItems.forEach(item => {
-      if (item.getAttribute('href') === 'ux-styling.html') {
-        item.classList.add('active');
-      }
-    });
-  }
+  // Set initial active state based on current page URL
+  const currentPath = window.location.pathname;
+  
+  navItems.forEach(item => {
+    const href = item.getAttribute('href');
+    
+    // Remove active class first
+    item.classList.remove('active');
+    
+    // Check if we're on the homepage (index.html or /)
+    if ((currentPath.endsWith('/') || currentPath.includes('index.html')) && 
+        (href === 'index.html' || href === './index.html' || href === '#')) {
+      item.classList.add('active');
+    }
+    // Check if we're on the apps brand assets page
+    else if (currentPath.includes('apps-brand-assets.html') && href === 'apps-brand-assets.html') {
+      item.classList.add('active');
+    }
+    // Check if we're on the UX styling page
+    else if (currentPath.includes('ux-styling.html') && href === 'ux-styling.html') {
+      item.classList.add('active');
+    }
+  });
   
   function highlightNavItem() {
     const scrollPosition = window.scrollY + 100; // Offset for header
     
-    // Don't run section highlighting on UX Styling page
-    if (window.location.pathname.includes('ux-styling.html')) {
+    // Don't run section highlighting on other pages
+    if (window.location.pathname.includes('ux-styling.html') || 
+        window.location.pathname.includes('apps-brand-assets.html')) {
       return;
     }
     
-    // First remove active class from all items
+    // First remove active class from all section nav items (but keep page nav active)
     navItems.forEach(item => {
-      item.classList.remove('active');
+      const href = item.getAttribute('href');
+      if (href && href.startsWith('#')) {
+        item.classList.remove('active');
+      }
     });
     
     // Find the current section and highlight its nav item
@@ -328,9 +347,21 @@ function initActiveNavigation() {
       });
     } else {
       // If no section is active (e.g., at the top of the page), highlight the first nav item
-      const firstNavItem = navItems[0];
-      if (firstNavItem) {
-        firstNavItem.classList.add('active');
+      const pageNavItems = Array.from(navItems).filter(item => {
+        const href = item.getAttribute('href');
+        return href && !href.startsWith('#');
+      });
+      
+      if (pageNavItems.length > 0) {
+        const currentPageItem = pageNavItems.find(item => {
+          const href = item.getAttribute('href');
+          return (currentPath.endsWith('/') || currentPath.includes('index.html')) && 
+                 (href === 'index.html' || href === './index.html' || href === '#');
+        });
+        
+        if (currentPageItem) {
+          currentPageItem.classList.add('active');
+        }
       }
     }
   }
@@ -341,8 +372,17 @@ function initActiveNavigation() {
   // Also add click handler to immediately set active class
   navItems.forEach(item => {
     item.addEventListener('click', function() {
-      navItems.forEach(i => i.classList.remove('active'));
-      this.classList.add('active');
+      const href = this.getAttribute('href');
+      
+      // Only handle page navigation here, not section navigation
+      if (href && !href.startsWith('#')) {
+        navItems.forEach(i => {
+          if (!i.getAttribute('href').startsWith('#')) {
+            i.classList.remove('active');
+          }
+        });
+        this.classList.add('active');
+      }
     });
   });
 }

@@ -40,7 +40,7 @@
   --spacing-lg: 3rem;      /* 48px */
   --spacing-xl: 5rem;      /* 80px */
   --spacing-xxl: 7.5rem;   /* 120px */
-  --content-margin: 18%;   /* Side margins for content - increased from 12% to 18% */
+  --content-margin: 10%;   /* Side margins for content - reduced from 18% to 10% */
   
   /* Border Radius */
   --border-radius-sm: 6px;
@@ -168,16 +168,16 @@ img {
 
 /* Layout - Mercedes-Benz Inspired Approach */
 .container {
-  width: 76%; /* Reduced width from 86% to 76% to provide more space on edges */
+  width: 88%; /* Increased width from 76% to 88% to better utilize available space */
   max-width: 1440px; /* Mercedes-Benz uses contained content within full-width sections */
   margin: 0 auto;
-  padding: 0 var(--spacing-xl); /* Increased horizontal padding from lg to xl */
+  padding: 0 var(--spacing-lg); /* Reduced padding from xl to lg for more content space */
 }
 
 .section {
-  padding: var(--spacing-xxl) var(--content-margin);
+  padding: var(--spacing-xl) var(--content-margin); /* Reduced from xxl to xl for better space utilization */
   position: relative;
-  margin-bottom: var(--spacing-xl);
+  margin-bottom: var(--spacing-lg); /* Reduced from xl to lg */
 }
 
 .section:nth-child(odd) {
@@ -186,13 +186,13 @@ img {
 
 .section-title {
   text-align: left;
-  margin-bottom: var(--spacing-xl);
+  margin-bottom: var(--spacing-lg); /* Reduced from xl to lg for better space utilization */
   position: relative;
   display: inline-block;
   font-weight: 300; /* Lighter weight for premium feel */
   color: var(--primary-black);
   letter-spacing: -0.03em; /* Slightly increased letter spacing for luxury feel */
-  padding-right: var(--spacing-xl); /* Add space to the right */
+  padding-right: var(--spacing-lg); /* Reduced from xl to lg */
 }
 
 .section-title::after {
@@ -209,8 +209,8 @@ img {
 .row {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  gap: var(--spacing-lg); /* Increased gap from md to lg for more breathing room */
-  margin-bottom: var(--spacing-xl);
+  gap: var(--spacing-md); /* Reduced from lg to md for better space utilization */
+  margin-bottom: var(--spacing-lg); /* Reduced from xl to lg */
   width: 100%; /* Ensure rows take full width */
 }
 
@@ -410,8 +410,8 @@ img {
 /* Color Palette - Mercedes-Benz Inspired */
 .color-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Increased from 260px to 280px */
-  gap: var(--spacing-lg); /* Increased spacing between items from md to lg */
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); /* Reduced from 280px to 240px to allow more items per row */
+  gap: var(--spacing-md); /* Reduced from lg to md for better space utilization */
   margin-bottom: var(--spacing-xxl);
   width: 100%; /* Ensure grid takes full width */
 }
@@ -455,7 +455,7 @@ img {
 }
 
 .color-info {
-  padding: var(--spacing-lg) var(--spacing-lg) var(--spacing-lg);
+  padding: var(--spacing-md) var(--spacing-md) var(--spacing-md); /* Reduced from lg to md for better space utilization */
   background-color: var(--primary-white);
 }
 
@@ -529,8 +529,8 @@ img {
 /* Logo Section - Mercedes-Benz Inspired */
 .logo-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); /* Increased from 320px to 340px */
-  gap: var(--spacing-lg); /* Increased from md to lg for better spacing */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Reduced from 340px to 300px to allow more items per row */
+  gap: var(--spacing-md); /* Reduced from lg to md for better space utilization */
   margin-bottom: var(--spacing-xl);
   width: 100%; /* Ensure grid takes full width */
 }
@@ -538,7 +538,7 @@ img {
 .logo-item {
   background-color: var(--primary-white);
   border-radius: var(--border-radius-lg);
-  padding: var(--spacing-xl); /* Increased padding from lg to xl for more space */
+  padding: var(--spacing-md); /* Reduced from xl to md for better space utilization */
   text-align: center;
   box-shadow: var(--shadow-md);
   transition: all var(--transition-medium);
@@ -569,8 +569,8 @@ img {
 }
 
 .logo-preview {
-  margin-bottom: var(--spacing-lg);
-  padding: var(--spacing-lg);
+  margin-bottom: var(--spacing-md); /* Reduced from lg to md */
+  padding: var(--spacing-md); /* Reduced from lg to md */
   background-color: var(--primary-white);
   border-radius: var(--border-radius-md);
   transition: all var(--transition-medium);
@@ -578,7 +578,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 180px;
+  min-height: 160px; /* Reduced from 180px to 160px */
   position: relative;
 }
 
@@ -597,7 +597,7 @@ img {
 }
 
 .logo-info p {
-  margin-bottom: var(--spacing-lg);
+  margin-bottom: var(--spacing-md); /* Reduced from lg to md */
   color: rgba(0, 0, 0, 0.7);
 }
 
@@ -699,8 +699,8 @@ img {
 /* UI Components - Modern Approach */
 .component-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); /* Larger for premium feel */
-  gap: var(--spacing-lg); /* Increased gap for luxury spacing */
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Reduced from 320px to 280px to allow more items per row */
+  gap: var(--spacing-md); /* Reduced from lg to md for better space utilization */
   margin-bottom: var(--spacing-xl);
   width: 100%; /* Ensure grid takes full width */
 }
@@ -708,13 +708,13 @@ img {
 .component-item {
   border: none;
   border-radius: var(--border-radius-lg);
-  padding: var(--spacing-xl) var(--spacing-lg);
+  padding: var(--spacing-md) var(--spacing-md); /* Reduced from xl/lg to md/md for better space utilization */
   background-color: var(--primary-white);
   box-shadow: var(--shadow-md);
   transition: all var(--transition-medium);
   position: relative;
   overflow: hidden;
-  min-height: 300px; /* Consistent height for grid items */
+  min-height: 280px; /* Reduced from 300px to 280px */
 }
 
 .component-item:hover {
@@ -883,7 +883,7 @@ select.form-input {
 }
 
 .card-body {
-  padding: var(--spacing-lg);
+  padding: var(--spacing-md); /* Reduced from lg to md for better space utilization */
 }
 
 .card-title {
@@ -1190,12 +1190,12 @@ select.form-input {
 /* Tabs - Modern Approach */
 .tabs {
   display: flex;
-  gap: var(--spacing-lg); /* Increased from sm to lg */
-  margin-bottom: var(--spacing-xl);
+  gap: var(--spacing-md); /* Reduced from lg to md for better space utilization */
+  margin-bottom: var(--spacing-lg); /* Reduced from xl to lg */
   border-bottom: none;
   flex-wrap: nowrap;
   overflow-x: auto;
-  padding: 0 var(--spacing-md) var(--spacing-md); /* Added horizontal padding */
+  padding: 0 var(--spacing-sm) var(--spacing-sm); /* Reduced from md to sm */
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
@@ -1251,9 +1251,9 @@ h3 + p, h4 + p {
   margin-top: calc(var(--spacing-xs) * -0.5);
 }
 .tab-content {
-  margin-bottom: var(--spacing-xl);
+  margin-bottom: var(--spacing-lg); /* Reduced from xl to lg */
   width: 100%; /* Ensure tab content fills width */
-  padding: 0 var(--spacing-lg); /* Added horizontal padding */
+  padding: 0 var(--spacing-md); /* Reduced from lg to md */
 }
 
 .tab-content h3 {

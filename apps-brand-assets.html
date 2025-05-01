@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apps Brand Assets - Project Boxcar</title>
+    <link rel="stylesheet" href="css/style-v2.css?v=20250416">
+    <link rel="stylesheet" href="css/placeholders.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/download-icons.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- GSAP Animation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo-link">
+                <img src="assets/images/white-logo.svg" alt="Project Boxcar Logo" class="logo">
+            </a>
+            <nav class="nav">
+                <a href="index.html" class="nav-item">Project Boxcar Brand</a>
+                <a href="apps-brand-assets.html" class="nav-item active">Apps Brand Assets</a>
+            </nav>
+            <button class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Apps Brand Assets</h1>
+                <p class="hero-subtitle">A comprehensive guide to app-specific branding, UI components, and design patterns for the Project Boxcar ecosystem.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Icons Section -->
+    <section id="app-icons" class="section">
+        <div class="container">
+            <h2 class="section-title">App Icons & Logos</h2>
+            <p class="mb-xl">Consistent app icons and logos help users identify and recognize our products across different platforms and devices.</p>
+            
+            <div class="tabs">
+                <div class="tab active" data-target="app-icon-guidelines">Icon Guidelines</div>
+                <div class="tab" data-target="app-logo-variations">Logo Variations</div>
+                <div class="tab" data-target="app-icon-usage">Usage Guidelines</div>
+            </div>
+            
+            <div id="app-icon-guidelines" class="tab-content active">
+                <h3 class="mb-lg">App Icon Guidelines</h3>
+                <p class="mb-xl">Follow these guidelines to ensure consistent app icons across all platforms.</p>
+                
+                <div class="row">
+                    <div class="col">
+                        <h4>Icon Grid & Safe Zone</h4>
+                        <div class="placeholder mb-md" style="height: 200px;">Icon Grid Illustration</div>
+                        <p>Use the standard icon grid to ensure consistent proportions:</p>
+                        <ul>
+                            <li>Base grid: 108 × 108 px</li>
+                            <li>Safe zone: 100 × 100 px</li>
+                            <li>Corner radius: 16 px</li>
+                            <li>Maintain visual weight across all icons</li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h4>Icon Sizes</h4>
+                        <p>Export icons in the following sizes for different platforms:</p>
+                        <ul>
+                            <li><strong>iOS:</strong> 1024×1024, 180×180, 120×120, 80×80, 60×60</li>
+                            <li><strong>Android:</strong> 512×512, 192×192, 144×144, 96×96, 72×72, 48×48</li>
+                            <li><strong>Web:</strong> 512×512, 256×256, 128×128, 64×64, 32×32, 16×16</li>
+                            <li><strong>Windows:</strong> 1240×1240, 620×620, 310×310, 150×150</li>
+                            <li><strong>macOS:</strong> 1024×1024, 512×512, 256×256, 128×128, 32×32, 16×16</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="app-logo-variations" class="tab-content">
+                <h3 class="mb-lg">App Logo Variations</h3>
+                <div class="logo-grid">
+                    <div class="logo-item">
+                        <h4>Boxcore App</h4>
+                        <div class="logo-preview">
+                            <div class="placeholder" style="height: 150px;">Boxcore App Logo</div>
+                            <button class="download-icon" title="Download SVG">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+                            </button>
+                        </div>
+                        <div class="logo-info">
+                            <p>Core platform app icon with distinctive cube motif.</p>
+                            <button class="btn btn-outline background-toggle">View on Dark Background</button>
+                        </div>
+                    </div>
+                    <div class="logo-item">
+                        <h4>BX Studio App</h4>
+                        <div class="logo-preview">
+                            <div class="placeholder" style="height: 150px;">BX Studio App Logo</div>
+                            <button class="download-icon" title="Download SVG">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+                            </button>
+                        </div>
+                        <div class="logo-info">
+                            <p>Development environment app icon with code editor styling.</p>
+                            <button class="btn btn-outline background-toggle">View on Dark Background</button>
+                        </div>
+                    </div>
+                    <div class="logo-item">
+                        <h4>Boxcar Lingo App</h4>
+                        <div class="logo-preview">
+                            <div class="placeholder" style="height: 150px;">Boxcar Lingo App Logo</div>
+                            <button class="download-icon" title="Download SVG">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+                            </button>
+                        </div>
+                        <div class="logo-info">
+                            <p>Natural language processing app icon with speech bubble motif.</p>
+                            <button class="btn btn-outline background-toggle">View on Dark Background</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="app-icon-usage" class="tab-content">
+                <h3 class="mb-lg">Usage Guidelines</h3>
+                <div class="row">
+                    <div class="col">
+                        <h4>Do's</h4>
+                        <ul>
+                            <li>Use the provided app icons without modification</li>
+                            <li>Maintain minimum clear space around icons</li>
+                            <li>Use platform-specific icon formats</li>
+                            <li>Ensure icons are recognizable at small sizes</li>
+                            <li>Use adaptive icons for Android</li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h4>Don'ts</h4>
+                        <ul>
+                            <li>Don't distort or stretch app icons</li>
+                            <li>Don't change the colors of app icons</li>
+                            <li>Don't add effects like shadows or glows</li>
+                            <li>Don't use app icons as decorative elements</li>
+                            <li>Don't place app icons on busy backgrounds</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Color Schemes Section -->
+    <section id="app-colors" class="section">
+        <div class="container">
+            <h2 class="section-title">App Color Schemes</h2>
+            <p class="mb-xl">Each app has its own color scheme that builds on the core brand colors while maintaining a unique identity.</p>
+            
+            <div class="tabs">
+                <div class="tab active" data-target="app-primary-colors">Primary Colors</div>
+                <div class="tab" data-target="app-accent-colors">Accent Colors</div>
+                <div class="tab" data-target="app-dark-mode">Dark Mode</div>
+            </div>
+            
+            <div id="app-primary-colors" class="tab-content active">
+                <h3 class="mb-lg">App Primary Colors</h3>
+                <div class="color-grid">
+                    <div class="color-item">
+                        <div class="color-preview" style="background-color: #00c2c2;">
+                            Boxcore
+                        </div>
+                        <div class="color-info">
+                            <div class="color-name">Boxcore Primary</div>
+                            <div class="color-value">#00c2c2</div>
+                            <div class="color-value">RGB: 0, 194, 194</div>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color-preview" style="background-color: #0090cc;">
+                            BX Studio
+                        </div>
+                        <div class="color-info">
+                            <div class="color-name">BX Studio Primary</div>
+                            <div class="color-value">#0090cc</div>
+                            <div class="color-value">RGB: 0, 144, 204</div>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color-preview" style="background-color: #00b4e0;">
+                            Lingo
+                        </div>
+                        <div class="color-info">
+                            <div class="color-name">Lingo Primary</div>
+                            <div class="color-value">#00b4e0</div>
+                            <div class="color-value">RGB: 0, 180, 224</div>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color-preview" style="background-color: #00a8d4;">
+                            Twin
+                        </div>
+                        <div class="color-info">
+                            <div class="color-name">Twin Primary</div>
+                            <div class="color-value">#00a8d4</div>
+                            <div class="color-value">RGB: 0, 168, 212</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="app-accent-colors" class="tab-content">
+                <h3 class="mb-lg">App Accent Colors</h3>
+                <div class="color-grid">
+                    <div class="color-item">
+                        <div class="color-preview" style="background-color: #ff5722;">
+                            Boxcore
+                        </div>
+                        <div class="color-info">
+                            <div class="color-name">Boxcore Accent</div>
+                            <div class="color-value">#ff5722</div>
+                            <div class="color-value">RGB: 255, 87, 34</div>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color-preview" style="background-color: #8bc34a;">
+                            BX Studio
+                        </div>
+                        <div class="color-info">
+                            <div class="color-name">BX Studio Accent</div>
+                            <div class="color-value">#8bc34a</div>
+                            <div class="color-value">RGB: 139, 195, 74</div>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color-preview" style="background-color: #9c27b0;">
+                            Lingo
+                        </div>
+                        <div class="color-info">
+                            <div class="color-name">Lingo Accent</div>
+                            <div class="color-value">#9c27b0</div>
+                            <div class="color-value">RGB: 156, 39, 176</div>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color-preview" style="background-color: #ffc107;">
+                            Twin
+                        </div>
+                        <div class="color-info">
+                            <div class="color-name">Twin Accent</div>
+                            <div class="color-value">#ffc107</div>
+                            <div class="color-value">RGB: 255, 193, 7</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="app-dark-mode" class="tab-content">
+                <h3 class="mb-lg">Dark Mode Color Schemes</h3>
+                <p>Each app includes a dark mode color scheme that maintains brand consistency while reducing eye strain in low-light environments.</p>
+                
+                <div class="row">
+                    <div class="col">
+                        <h4>Dark Mode Background Colors</h4>
+                        <div class="color-grid">
+                            <div class="color-item">
+                                <div class="color-preview" style="background-color: #121212; color: white;">
+                                    Primary
+                                </div>
+                                <div class="color-info">
+                                    <div class="color-name">Primary Background</div>
+                                    <div class="color-value">#121212</div>
+                                </div>
+                            </div>
+                            <div class="color-item">
+                                <div class="color-preview" style="background-color: #1e1e1e; color: white;">
+                                    Secondary
+                                </div>
+                                <div class="color-info">
+                                    <div class="color-name">Secondary Background</div>
+                                    <div class="color-value">#1e1e1e</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <h4>Dark Mode Text Colors</h4>
+                        <div class="color-grid">
+                            <div class="color-item">
+                                <div class="color-preview" style="background-color: #ffffff; color: black;">
+                                    Primary
+                                </div>
+                                <div class="color-info">
+                                    <div class="color-name">Primary Text</div>
+                                    <div class="color-value">#ffffff</div>
+                                </div>
+                            </div>
+                            <div class="color-item">
+                                <div class="color-preview" style="background-color: #b0b0b0; color: black;">
+                                    Secondary
+                                </div>
+                                <div class="color-info">
+                                    <div class="color-name">Secondary Text</div>
+                                    <div class="color-value">#b0b0b0</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- App UI Components Section -->
+    <section id="app-ui" class="section">
+        <div class="container">
+            <h2 class="section-title">App UI Components</h2>
+            <p class="mb-xl">Consistent UI components ensure a cohesive user experience across all Project Boxcar applications.</p>
+            
+            <div class="tabs">
+                <div class="tab active" data-target="app-buttons">Buttons</div>
+                <div class="tab" data-target="app-inputs">Inputs</div>
+                <div class="tab" data-target="app-cards">Cards</div>
+            </div>
+            
+            <div id="app-buttons" class="tab-content active">
+                <h3 class="mb-lg">App Buttons</h3>
+                <div class="component-grid">
+                    <div class="component-item">
+                        <h4 class="component-title">Primary Button</h4>
+                        <button class="btn btn-primary">Primary Button</button>
+                        <div class="code-block mt-md">
+                            <code>
+<button class="btn btn-primary">Primary Button</button>
+                            </code>
+                        </div>
+                    </div>
+                    <div class="component-item">
+                        <h4 class="component-title">Secondary Button</h4>
+                        <button class="btn btn-secondary">Secondary Button</button>
+                        <div class="code-block mt-md">
+                            <code>
+<button class="btn btn-secondary">Secondary Button</button>
+                            </code>
+                        </div>
+                    </div>
+                    <div class="component-item">
+                        <h4 class="component-title">Icon Button</h4>
+                        <button class="btn btn-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                        </button>
+                        <div class="code-block mt-md">
+                            <code>
+<button class="btn btn-icon">
+  <svg><!-- Icon SVG --></svg>
+</button>
+                            </code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="app-inputs" class="tab-content">
+                <h3 class="mb-lg">App Inputs</h3>
+                <div class="component-grid">
+                    <div class="component-item">
+                        <h4 class="component-title">Text Input</h4>
+                        <div class="form-group">
+                            <label for="app-text-input" class="form-label">Text Input</label>
+                            <input type="text" id="app-text-input" class="form-input" placeholder="Enter text">
+                        </div>
+                        <div class="code-block mt-md">
+                            <code>
+<div class="form-group">
+  <label for="input-id" class="form-label">Label</label>
+  <input type="text" id="input-id" class="form-input" placeholder="Placeholder">
+</div>
+                            </code>
+                        </div>
+                    </div>
+                    <div class="component-item">
+                        <h4 class="component-title">Search Input</h4>
+                        <div class="form-group">
+                            <label for="app-search-input" class="form-label">Search</label>
+                            <div class="search-input">
+                                <input type="text" id="app-search-input" placeholder="Search...">
+                                <button class="search-button">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="code-block mt-md">
+                            <code>
+<div class="form-group">
+  <label class="form-label">Search</label>
+  <div class="search-input">
+    <input type="text" placeholder="Search...">
+    <button class="search-button">
+      <svg><!-- Search icon --></svg>
+    </button>
+  </div>
+</div>
+                            </code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="app-cards" class="tab-content">
+                <h3 class="mb-lg">App Cards</h3>
+                <div class="component-grid">
+                    <div class="component-item">
+                        <h4 class="component-title">Basic Card</h4>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Card Title</h5>
+                                <p>This is a basic card with just a title and text content.</p>
+                            </div>
+                        </div>
+                        <div class="code-block mt-md">
+                            <code>
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">Card Title</h5>
+    <p>Card content goes here.</p>
+  </div>
+</div>
+                            </code>
+                        </div>
+                    </div>
+                    <div class="component-item">
+                        <h4 class="component-title">Action Card</h4>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Action Card</h5>
+                                <p>This card includes actions in the footer.</p>
+                            </div>
+                            <div class="card-footer">
+                                <button class="btn btn-text">Cancel</button>
+                                <button class="btn btn-primary">Action</button>
+                            </div>
+                        </div>
+                        <div class="code-block mt-md">
+                            <code>
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">Action Card</h5>
+    <p>Card content goes here.</p>
+  </div>
+  <div class="card-footer">
+    <button class="btn btn-text">Cancel</button>
+    <button class="btn btn-primary">Action</button>
+  </div>
+</div>
+                            </code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Typography Section -->
+    <section id="app-typography" class="section">
+        <div class="container">
+            <h2 class="section-title">App Typography</h2>
+            <p class="mb-xl">Consistent typography ensures readability and brand alignment across all applications.</p>
+            
+            <div class="tabs">
+                <div class="tab active" data-target="app-type-scale">Type Scale</div>
+                <div class="tab" data-target="app-type-styles">Type Styles</div>
+            </div>
+            
+            <div id="app-type-scale" class="tab-content active">
+                <h3 class="mb-lg">App Type Scale</h3>
+                <div class="typography-sample">
+                    <h1>Heading 1 (24px)</h1>
+                    <h2>Heading 2 (20px)</h2>
+                    <h3>Heading 3 (18px)</h3>
+                    <h4>Heading 4 (16px)</h4>
+                    <h5>Heading 5 (14px)</h5>
+                    <h6>Heading 6 (12px)</h6>
+                    <p>Body Text (14px) - The quick brown fox jumps over the lazy dog.</p>
+                    <p><small>Small Text (12px) - The quick brown fox jumps over the lazy dog.</small></p>
+                </div>
+                
+                <h3 class="mb-md mt-xl">CSS Implementation</h3>
+                <div class="code-block">
+                    <code>
+/* App Typography Variables */
+:root {
+  --app-font-size-xs: 12px;
+  --app-font-size-sm: 14px;
+  --app-font-size-md: 16px;
+  --app-font-size-lg: 18px;
+  --app-font-size-xl: 20px;
+  --app-font-size-xxl: 24px;
+}
+
+/* Example usage */
+h1 {
+  font-size: var(--app-font-size-xxl);
+  font-weight: 700;
+}
+
+body {
+  font-size: var(--app-font-size-sm);
+  line-height: 1.5;
+}
+                    </code>
+                </div>
+            </div>
+            
+            <div id="app-type-styles" class="tab-content">
+                <h3 class="mb-lg">App Type Styles</h3>
+                <div class="row">
+                    <div class="col">
+                        <h4>Text Styles</h4>
+                        <div class="typography-sample">
+                            <div style="font-weight: 700;">Bold Text</div>
+                            <div style="font-weight: 400;">Regular Text</div>
+                            <div style="font-style: italic;">Italic Text</div>
+                            <div style="text-transform: uppercase;">Uppercase Text</div>
+                            <div style="text-decoration: underline;">Underlined Text</div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <h4>Text Colors</h4>
+                        <div class="typography-sample">
+                            <div style="color: #000000;">Primary Text</div>
+                            <div style="color: #666666;">Secondary Text</div>
+                            <div style="color: #999999;">Tertiary Text</div>
+                            <div style="color: #00a2e5;">Accent Text</div>
+                            <div style="color: #ff0000;">Error Text</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-8">
+                    <img src="assets/images/white-logo.svg" alt="Project Boxcar Logo" class="footer-logo">
+                    <p class="footer-text">© 2025 Project Boxcar. All rights reserved.</p>
+                    <p class="footer-text">This Apps Brand Assets guide serves as the definitive reference for app-specific branding, UI components, and design patterns for the Project Boxcar ecosystem.</p>
+                </div>
+                <div class="col-4">
+                    <h4 class="text-white mb-md">Quick Links</h4>
+                    <nav class="footer-nav">
+                        <a href="index.html" class="nav-item">Project Boxcar Brand</a>
+                        <a href="apps-brand-assets.html" class="nav-item">Apps Brand Assets</a>
+                        <a href="#app-icons" class="nav-item">App Icons</a>
+                        <a href="#app-colors" class="nav-item">App Colors</a>
+                        <a href="#app-ui" class="nav-item">App UI</a>
+                        <a href="#app-typography" class="nav-item">App Typography</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Add this script for header scroll effect -->
+    <script>
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+
+    <script src="js/script.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/download-icons.js"></script>
+</body>
+</html>
